@@ -1,7 +1,11 @@
 import './App.css';
 import { useState, useEffect } from 'react'
 import axios from 'axios';
-import { toHaveDisplayValue } from '@testing-library/jest-dom/dist/matchers';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import SunInfo from './components/SunInfo';
+
+
 
 
 
@@ -32,9 +36,9 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Sun Run is the best!!!!!</h1>
-      </header>
+      < Header />
+      < SunInfo />
+      < Footer />
     </div>
   );
 }
