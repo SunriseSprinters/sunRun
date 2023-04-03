@@ -1,6 +1,6 @@
 
 const Form = (props) => {
-
+    // de-structuring the props and using the passed down functions for onSubmit and onChange events.
     const {handleChange, handleSubmit} = props;
 
     return (
