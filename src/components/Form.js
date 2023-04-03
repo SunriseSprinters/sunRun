@@ -7,7 +7,7 @@ const Form = (props) => {
         <section className="form">
             <form onSubmit={handleSubmit} action="">
                 <label htmlFor="date">date</label>
-                <input onChange={handleChange} type="text" name="date" id="date" placeholder="yyyy-mm-dd" />
+                <input onChange={handleChange} type="date" name="date" id="date" required/>
                 <button>Get Sun Data!</button>
             </form>
         </section>
