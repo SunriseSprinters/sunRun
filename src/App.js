@@ -7,8 +7,6 @@ import SunInfo from './components/SunInfo';
 
 
 
-
-
 function App() {
   return (
     <div className="App">
