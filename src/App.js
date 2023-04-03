@@ -10,30 +10,6 @@ import SunInfo from './components/SunInfo';
 
 
 function App() {
-
-  const [sunData, setSunData] = useState();
-
-  useEffect(() => {
-    axios({
-        url: "https://api.sunrise-sunset.org/json",
-        params: {
-          // Googled for Toronto's long and lat 
-            lat: 43.651070,
-            lng: -79.347015,
-            date: "2022-04-22",
-        }
-        
-    })
-        .then( (apiData) => {
-
-        setSunData(apiData.data);
-        })
-
-    }, []);
-
-  console.log(sunData)
-
-
   return (
     <div className="App">
       < Header />
