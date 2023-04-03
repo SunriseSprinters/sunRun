@@ -3,15 +3,20 @@ import './sass/App.scss';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import SunInfo from './components/SunInfo';
+import { Route, Routes } from 'react-router-dom';
+import Home from './components/Home';
 
-
+// App.js hold the routes of SunRun. The <Home /> component will be our default home page and <SunInfo /> will be our main app component where the <Form /> and <Display /> component will live
 
 function App() {
   return (
     <div className="App">
-      < Header />
-      < SunInfo />
-      < Footer />
+      <Header />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/sunApp' element={<SunInfo />} />
+      </Routes>
+      <Footer />
     </div>
   );
 }
