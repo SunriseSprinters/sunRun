@@ -1,14 +1,12 @@
 const Header = () => {
     return (
-        <section className="header">
+        <header>
             <nav>
                 <ul>
-                    <li>
-                        SunRun
-                    </li>
+                    <li className="logo">SunRun</li>
                 </ul>
             </nav>
-        </section>
+        </header>
     )
 }
 

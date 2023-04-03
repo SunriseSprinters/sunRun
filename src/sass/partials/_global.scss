@@ -1,0 +1,36 @@
+// global.scss
+@use './variables' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: $baseFont;
+    background: $background;
+}
+
+.wrapper {
+    max-width: 1440px;
+    width: 85%;
+    margin: 0 auto;
+}
+
+figure {
+    margin: 0;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0px;
+}
+
+a {
+    text-decoration: none;
+}

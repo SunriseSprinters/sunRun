@@ -1,0 +1,11 @@
+// typography.scss
+@use './variables' as *;
+
+a {
+    color: #000
+}
+
+a:hover,
+a:focus {
+    color: $background;
+}
