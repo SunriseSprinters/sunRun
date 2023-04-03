@@ -1,8 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import Form from "./Form";
-import Header from "./Header";
-import Footer from "./Footer";
+import SunDisplay from './SunDisplay';
 
 
 const SunInfo = () => {
@@ -10,11 +9,18 @@ const SunInfo = () => {
     const [sunData, setSunData] = useState();
     // initializing state to keep track on the date input that the user wants to check
     const [dateInput, setDateInput] = useState('');
+    const [sunriseRun, setSunriseRun] = useState(true)
+    const [dataReady, setDataReady] = useState()
 
     // function used to keep track of the user input on the form
     const handleChange = (e) => {
         setDateInput(e.target.value);
         console.log(e.target.value)
+    }
+
+    const handleToggle = () => {
+        setSunriseRun((current) => !current);
+        console.log(sunriseRun)
     }
     // handle submit function to keep track of when user submit the form so that we can make the axios call to the API and retrieve the information of the Sunset and Sunrise at the Toronto coordinates
     const handleSubmit = (e) => {
@@ -32,6 +38,7 @@ const SunInfo = () => {
         // updating the sunData state with the api data
         .then( (apiData) => {
             setSunData(apiData.data);
+            setDataReady(true);
             console.log(apiData.data)
             })
     }
@@ -39,9 +46,8 @@ const SunInfo = () => {
     return (
         // passing the handleChange and handleSubmit functions as props so that the <Form /> component have access to it
         <div className="sunInfoPage">
-            <Header />
-            <Form handleChange={handleChange} handleSubmit={handleSubmit}/>
-            <Footer />
+            <Form handleChange={handleChange} handleSubmit={handleSubmit} sunriseRun={sunriseRun} handleToggle={handleToggle}/>
+            {dataReady && <SunDisplay sunriseRun={sunriseRun} sunData={sunData}/>}
         </div>
     )
 }
