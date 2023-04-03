@@ -8,9 +8,7 @@ const Home = () => {
         <div className="homePage">
             <section className="homeContent">
                 <Link to={`/sunApp`}>
-                    <h4>to App 
-                        {AiOutlineArrowDown}
-                    </h4>
+                    <h4><AiOutlineArrowDown /></h4>
                 </Link>
             </section>
         </div>
