@@ -1,17 +1,16 @@
-import Footer from "./Footer";
-import Header from "./Header";
 import { Link } from "react-router-dom";
+
+// ASSETS
+import { AiOutlineArrowDown } from 'react-icons/ai';
 
 const Home = () => {
     return (
         <div className="homePage">
-            <Header />
             <section className="homeContent">
                 <Link to={`/sunApp`}>
-                    <h4>to App</h4>
+                    <h4><AiOutlineArrowDown /></h4>
                 </Link>
             </section>
-            <Footer />
         </div>
     )
 }

@@ -1,4 +1,7 @@
 import './sass/App.scss';
+
+import Header from './components/Header';
+import Footer from './components/Footer';
 import SunInfo from './components/SunInfo';
 import { Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
@@ -8,10 +11,12 @@ import Home from './components/Home';
 function App() {
   return (
     <div className="App">
+      <Header />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/sunApp' element={<SunInfo />} />
       </Routes>
+      <Footer />
     </div>
   );
 }

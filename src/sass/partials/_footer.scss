@@ -1,1 +1,15 @@
 // footer.scss
+@use './variables' as *;
+
+footer {
+    background: $orange;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    p {
+        line-height: 45px;
+        text-align: center;
+        font-size: 0.8rem;
+    }
+
+}

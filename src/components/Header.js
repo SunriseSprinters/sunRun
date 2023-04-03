@@ -1,14 +1,14 @@
+import { Link } from 'react-router-dom';
+
 const Header = () => {
     return (
-        <section className="header">
+        <header>
             <nav>
                 <ul>
-                    <li>
-                        SunRun
-                    </li>
+                    <li className="logo"> <Link to="/">SunRun</Link></li>
                 </ul>
             </nav>
-        </section>
+        </header>
     )
 }
 
