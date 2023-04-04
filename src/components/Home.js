@@ -22,9 +22,11 @@ const Home = () => {
                         <p>Click the arrow below to start planning!</p>
                     </div>
 
-                    <Link to={`/sunApp`}>
-                        <h4><AiOutlineArrowDown /></h4>
-                    </Link>
+                    <div className="buttonContainer">
+                        <Link to={`/sunApp`}>
+                            <button className="arrowDownButton"><AiOutlineArrowDown /></button>
+                        </Link>
+                    </div>
                 </div>
             </section>
         </main>
