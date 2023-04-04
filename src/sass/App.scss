@@ -1,3 +1,7 @@
-@use './partials/setup';
-@use './partials/header';
-@use './partials/footer';
+@use './partials/_setup.scss';
+@use './partials/_global.scss';
+@use './partials/_typography.scss';
+@use './partials/_variables.scss' as *;
+@use './partials/_header.scss';
+@use './partials/_footer.scss';
+@use './partials/_home.scss';
