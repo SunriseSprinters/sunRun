@@ -8,8 +8,8 @@ const SunInfo = () => {
 
     const [sunData, setSunData] = useState();
     const [dateInput, setDateInput] = useState('');
-    const [sunriseRun, setSunriseRun] = useState(true)
-    const [dataReady, setDataReady] = useState()
+    const [sunriseRun, setSunriseRun] = useState(true);
+    const [dataReady, setDataReady] = useState();
 
     const handleChange = (e) => {
         setDateInput(e.target.value);
@@ -18,14 +18,12 @@ const SunInfo = () => {
 
     const handleToggle = () => {
         setSunriseRun((current) => !current);
-        console.log(sunriseRun)
+        console.log(sunriseRun);
     }
     
     const handleSubmit = (e) => {
         e.preventDefault();
 
-
-    
 
         axios({
             url: "https://api.sunrise-sunset.org/json",

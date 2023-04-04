@@ -9,7 +9,7 @@ const Form = (props) => {
         <section className="form">
             <form onSubmit={handleSubmit} action="">
                 <label htmlFor="date" className="sr-only">date</label>
-                <input onChange={handleChange} type="date" name="date" id="date" placeholder="yyyy-mm-dd" />
+                <input onChange={handleChange} type="date" name="date" id="date" placeholder="yyyy-mm-dd"/>
                 
                 <a onClick={handleToggle}>{toggleDisplay}</a>
                 <button>Get Sun Data!</button> 
