@@ -2,7 +2,10 @@
 @use './variables' as *;
 
 header {
+    position: fixed;
+    width: 100%;
     background: $orange;
+    
     .logo {
         margin-left: 50px;
         width: 60px;
