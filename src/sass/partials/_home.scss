@@ -1,0 +1,36 @@
+@use './variables' as *;
+
+.homePage {
+    height: 100vh;
+}
+
+.homeTextContainer {
+    height: 45vh;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+
+    img {
+        height: 12rem;
+        width: 12rem;
+        position: absolute;
+        top: 10%;
+        left: 20%;
+    }
+
+    h1 {
+        padding: 5rem 0 0 3rem;
+    }
+}
+
+.textContainer{
+    background-color: $yellow;
+    opacity: 70%;
+    width: 75%;
+    margin: 0 auto;
+    padding: 2rem;
+
+    p {
+        text-align: center;
+    }
+} 
