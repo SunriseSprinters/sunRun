@@ -18,20 +18,28 @@ const Form = (props) => {
     return (
         <section className="form">
             <form onSubmit={handleSubmit} action="">
-                <label htmlFor="date" className="sr-only">date</label>
+                <label 
+                    htmlFor="date" 
+                    className="sr-only">
+                        date
+                    </label>
                 <input 
                     onChange={handleChange} 
                     type="date" 
                     name="date" 
                     id="date" 
                     placeholder="yyyy-mm-dd" 
-                    min={date}/>
+                    />
                 <a onClick={handleToggle}>{toggleDisplay}</a>
-                {sunriseRun === false && <>
-                <label className="sr-only">Length of run</label>
-                <input type="numbers" placeholder="enter run length in minutes"></input>
-                </>}
-                <button>let's run<span></span></button> 
+                {sunriseRun === false && 
+                    <>
+                        <label className="sr-only">Length of run</label>
+                        <input 
+                            type="numbers" 
+                            placeholder="enter run length in minutes">
+                        </input>
+                    </>}
+                <button>Get Sun Data!</button> 
             </form>
         </section>
     )

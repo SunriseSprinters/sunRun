@@ -46,7 +46,13 @@ const SunInfo = () => {
     return (
         // passing the handleChange and handleSubmit functions as props so that the <Form /> component have access to it
         <div className="sunInfoPage">
-            <Form handleChange={handleChange} handleSubmit={handleSubmit} sunriseRun={sunriseRun} handleToggle={handleToggle}/>
+            <Form 
+                handleChange={handleChange} 
+                handleSubmit={handleSubmit} 
+                sunriseRun={sunriseRun} 
+                handleToggle={handleToggle} 
+            />
+
             {dataReady && <SunDisplay sunriseRun={sunriseRun} sunData={sunData}/>}
         </div>
     )
