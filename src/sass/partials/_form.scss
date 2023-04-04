@@ -1,0 +1,51 @@
+@use './_variables.scss' as *;
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    form {
+        background: $yellow;
+        display: flex;
+        flex-direction: column;
+        padding: 50px;
+        width: 50%;
+        text-align: center;
+        margin: 20px;
+        min-height: 360px;
+        align-content: center;
+    }
+}
+
+.formInput {
+    display: flex;
+    input,
+    a,
+    button {
+        line-height: 32px;
+        padding: 5px;
+        text-align: center;
+        margin: 5px 0;
+        width: 70%;
+
+    }
+    p,
+    label {
+        text-transform: uppercase;
+                line-height: 32px;
+                    padding: 5px;
+                    text-align: center;
+                    margin: 5px 0;
+                    width: 70%;
+    }
+
+    a {
+        font-size: 2rem;
+    }
+
+    a:hover,
+    a:focus {
+        color: $orange;
+    }
+}
