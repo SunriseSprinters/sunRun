@@ -9,18 +9,19 @@ const SunInfo = () => {
     const [sunData, setSunData] = useState();
     // initializing state to keep track on the date input that the user wants to check
     const [dateInput, setDateInput] = useState('');
-    const [sunriseRun, setSunriseRun] = useState(true)
-    const [dataReady, setDataReady] = useState()
+    const [sunriseRun, setSunriseRun] = useState(true);
+    const [dataReady, setDataReady] = useState();
 
     // function used to keep track of the user input on the form
     const handleChange = (e) => {
         setDateInput(e.target.value);
         console.log(e.target.value)
+
     }
 
     const handleToggle = () => {
-        setSunriseRun((current) => !current);
-        console.log(sunriseRun)
+        setSunriseRun(!sunriseRun);
+
     }
     // handle submit function to keep track of when user submit the form so that we can make the axios call to the API and retrieve the information of the Sunset and Sunrise at the Toronto coordinates
     const handleSubmit = (e) => {
