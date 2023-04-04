@@ -32,6 +32,7 @@ const Form = (props) => {
                     required
                     placeholder="yyyy-mm-dd" 
                     min={date}
+                    value={props.dateInput}
                     />
                 <button type="button" onClick={handleToggle}>{toggleDisplay}</button>
                 {sunriseRun === false && 

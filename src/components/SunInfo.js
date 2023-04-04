@@ -68,6 +68,7 @@ const SunInfo = () => {
                 handleToggle={handleToggle} 
                 sunsetRun={sunsetRun}
                 typedValue={runDuration}
+                dateInput={dateInput}
             />
 
             {dataReady && <SunDisplay sunriseRun={sunriseRun} sunData={sunData} sunsetDeparture={sunsetDeparture} sunriseDeparture={sunriseDeparture} />}
