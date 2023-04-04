@@ -16,11 +16,12 @@ const SunInfo = () => {
     const handleChange = (e) => {
         setDateInput(e.target.value);
         console.log(e.target.value)
+
     }
 
     const handleToggle = () => {
-        setSunriseRun((current) => !current);
-        console.log(sunriseRun);
+        setSunriseRun(!sunriseRun);
+
     }
     // handle submit function to keep track of when user submit the form so that we can make the axios call to the API and retrieve the information of the Sunset and Sunrise at the Toronto coordinates
     const handleSubmit = (e) => {
