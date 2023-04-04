@@ -1,11 +1,13 @@
 // header.scss
-
 @use './variables' as *;
 
 header {
+    position: fixed;
+    width: 100%;
     background: $orange;
+    
     .logo {
-        line-height: 45px;
         margin-left: 50px;
+        width: 5%;
     }
 }
