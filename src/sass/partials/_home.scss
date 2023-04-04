@@ -5,49 +5,65 @@
 }
 
 .homeTextContainer {
-    height: 45vh;
+    height: 35vh;
+    padding: 3rem 0;
     display: flex; 
     justify-content: center;
     align-items: center;
 
     img {
-        height: 12rem;
-        width: 12rem;
+        height: 10rem;
+        width: 10rem;
         position: absolute;
-        top: 10%;
+        top: 7%;
         left: 20%;
     }
 
     h1 {
-        padding: 5rem 0 0 3rem;
+        padding: 3rem 0 0 3rem;
     }
 }
 
 .textContainer{
+    width: 80%;
+    margin: 0 auto;
+    padding: 1rem;
     background-color: $yellow;
     opacity: 70%;
-    width: 75%;
-    margin: 0 auto;
-    padding: 2rem;
+
+    h3 {
+        text-align: center;
+        padding-bottom: 1rem;
+    }
 
     p {
         text-align: center;
     }
 } 
 
+.instructions {
+    width: 70%;
+    padding: 1rem 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    list-style-type: "📍";
+}
+
 .buttonContainer {
     display: flex;
     justify-content: center;
-}
 
-.arrowDownButton {
-    width: 4.5rem;
-    padding-top: 0.5rem;
-    text-align: center;
-    margin-top: 3rem;
-    background: $yellow;
-    border-radius: 50%;
-    border: none;
-    font-size: 3rem;
-    cursor: pointer;
+    .arrowDownButton {
+        width: 4.5rem;
+        margin: 2rem 0;
+        padding-top: 0.5rem;
+        background: $yellow;
+        opacity: 70%;
+        border-radius: 50%;
+        border: none;
+        text-align: center;
+        cursor: pointer;
+    }
 }

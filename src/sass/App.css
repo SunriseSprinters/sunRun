@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -263,13 +264,18 @@ h2,
 h3,
 h4 {
   font-family: "Quicksand", sans-serif;
+  letter-spacing: 0.05rem;
   margin: 0;
   padding: 0;
 }
 
 h1 {
   color: #E84855;
-  font-size: clamp(1.5rem, 10vw, 10rem);
+  font-size: clamp(1.5rem, 10vw, 8rem);
+}
+
+h3 {
+  font-size: 2rem;
 }
 
 p,
@@ -277,7 +283,7 @@ a,
 li {
   color: #2B3A67;
   font-family: "Poppins", sans-serif;
-  font-size: clamp(0.8rem, 2vw, 1rem);
+  font-size: clamp(0.8rem, 2vw, 0.9rem);
   line-height: 1.5rem;
   letter-spacing: 0.05rem;
 }
@@ -296,7 +302,17 @@ a:focus {
   color: #F8F7F4;
 }
 
+.instructions li {
+  color: black;
+}
+
+.arrowDownButton {
+  font-size: 3rem;
+}
+
 header {
+  position: fixed;
+  width: 100%;
   background: #FF9B71;
 }
 header .logo {
@@ -321,46 +337,60 @@ footer p {
 }
 
 .homeTextContainer {
-  height: 45vh;
+  height: 35vh;
+  padding: 3rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .homeTextContainer img {
-  height: 12rem;
-  width: 12rem;
+  height: 10rem;
+  width: 10rem;
   position: absolute;
-  top: 10%;
+  top: 7%;
   left: 20%;
 }
 .homeTextContainer h1 {
-  padding: 5rem 0 0 3rem;
+  padding: 3rem 0 0 3rem;
 }
 
 .textContainer {
+  width: 80%;
+  margin: 0 auto;
+  padding: 1rem;
   background-color: #FFFD82;
   opacity: 70%;
-  width: 75%;
-  margin: 0 auto;
-  padding: 2rem;
+}
+.textContainer h3 {
+  text-align: center;
+  padding-bottom: 1rem;
 }
 .textContainer p {
   text-align: center;
+}
+
+.instructions {
+  width: 70%;
+  padding: 1rem 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  list-style-type: "📍";
 }
 
 .buttonContainer {
   display: flex;
   justify-content: center;
 }
-
-.arrowDownButton {
+.buttonContainer .arrowDownButton {
   width: 4.5rem;
+  margin: 2rem 0;
   padding-top: 0.5rem;
-  text-align: center;
-  margin-top: 3rem;
   background: #FFFD82;
+  opacity: 70%;
   border-radius: 50%;
   border: none;
-  font-size: 3rem;
+  text-align: center;
   cursor: pointer;
 }/*# sourceMappingURL=App.css.map */
