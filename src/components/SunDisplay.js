@@ -7,7 +7,9 @@ const SunDisplay = (props) => {
     const departureTime = sunriseRun ? sunriseDeparture : sunsetDeparture
 
     return(
-        <p>Start your SunRun at: <span>{departureTime}</span></p>
+        <section className="sunDisplay">
+            <p>Start your SunRun at: <span>{departureTime}</span></p>
+        </section>
     )
 }
 

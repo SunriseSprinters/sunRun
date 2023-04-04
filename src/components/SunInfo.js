@@ -22,11 +22,11 @@ const SunInfo = () => {
     const handleChange = (e) => {
         setDateInput(e.target.value);
         console.log(e.target.value)
+
     }
 
     const handleToggle = () => {
-        setSunriseRun((current) => !current);
-        console.log(sunriseRun)
+        setSunriseRun(!sunriseRun);
     }
     // function used to control the input value for the user time run time duration
     const sunsetRun = (e) => {
