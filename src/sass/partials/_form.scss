@@ -4,15 +4,15 @@
     display: flex;
     justify-content: center;
     align-content: center;
-    margin: 3%;
+    padding-top: 15vh;
+    margin-bottom: 3%;
     flex-shrink: 0.5;
     form {
         display: flex;
         flex-direction: column;
         background: $yellow;
         padding: 3%;
-        height: 41.11%;
-        width: 50%;
+        width: 55%;
         align-content: center;
         position: relative;
         flex-shrink: 0.5;
@@ -22,6 +22,7 @@
             left: 0;
             top: 0;
             text-align: left;
+            width: 40px;
         }
         input,
         a,
@@ -54,11 +55,9 @@ button[type="submit"] {
     transition: all 0.5s;
     cursor: pointer; 
     text-transform: uppercase;
-    margin: 5px auto;
     border: none;
     span {
         cursor: pointer;
-        position: relative;
         transition: 0.5s;
     }
     span:after {
@@ -66,12 +65,12 @@ button[type="submit"] {
         opacity: 0;
         top: 0;
         transition: 0.5s;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 }
 
 button[type="submit"]:hover span {
-    padding-right: 25px;
+    padding-right: 15px;
 }
 
 button[type="submit"]:hover span:after {
@@ -89,3 +88,29 @@ button[type="button"] {
     }
 }
 
+
+
+// MEDIA QUERIES
+@media (max-width: 1000px) {
+    .form form {
+        width: 65%;
+    }
+}
+
+@media (max-width: 700px) {
+    .form form {
+        width: 75%;
+    }
+}
+
+@media (max-width: 543px) {
+    .form form {
+        width: 80%;
+    }
+}
+
+@media (max-width: 419px) {
+    .form form {
+        width: 85%;
+    }
+}

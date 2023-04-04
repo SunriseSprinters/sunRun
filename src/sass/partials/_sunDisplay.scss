@@ -4,76 +4,8 @@
 .sunDisplay {
     margin: 0 auto;
     background: $yellow;
-    width: 30%;
+    width: 40%;
     text-align: center;
     padding: 20px 10px;
-    span {
-        display: block;
-        font-size: 3rem;
-        line-height: 3rem;
-    }
 }
 
-// MEDIA QUERIES ( to be added to media queries partial )
-@media (max-width: 1117px) {
-    .sunDisplay h2 {
-        font-size: 2.7rem;
-    }
-}
-
-@media (max-width: 1015px) {
-    .sunDisplay {
-        width: 40%;
-    }
-}
-
-@media (max-width: 761px) {
-    .sunDisplay {
-        width: 45%;
-    }
-}
-
-@media (max-width: 677px) {
-    .sunDisplay
-    h2 {
-    font-size: 2.5rem;
-    }
-}
-
-
-@media (max-width: 632px) {
-    .sunDisplay h2 {
-        font-size: 2rem;
-    }
-}
-
-@media (max-width: 520px) {
-    .sunDisplay h2 {
-        font-size: 1.7rem;
-    }
-}
-
-@media (max-width: 451px) {
-    .sunDisplay h2 {
-        font-size: 1.5rem;
-    }
-}
-
-@media (max-width: 444px) {
-    .sunDisplay {
-        p {
-            font-size: .8rem;
-        }
-        h2 {
-        font-size: 1.5rem;
-        }
-    }
-}
-
-@media (max-width: 376px) {
-    .sunDisplay {
-        h2 {
-            font-size: 1.3rem;
-        }
-    }
-}

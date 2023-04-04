@@ -15,14 +15,3 @@ footer {
     }
 
 }
-
-// MEDIA QUERIES ( to be added to MEDIA QUERIES partial )
-@media (max-width: 658px) {
-    footer span {
-        display: block;
-    }
-    footer p,
-    footer a {
-        line-height: 20px;
-    }
-}
