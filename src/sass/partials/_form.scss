@@ -3,49 +3,67 @@
 .form {
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100%;
+    align-content: center;
+    margin: 50px;
     form {
-        background: $yellow;
         display: flex;
         flex-direction: column;
+        background: $yellow;
         padding: 50px;
+        height: 360px;
         width: 50%;
-        text-align: center;
-        margin: 20px;
-        min-height: 360px;
         align-content: center;
+        input,
+        a,
+        button {
+            width: 70%;
+            margin: 5px auto;
+            text-align: center;
+            border: none;
+            border-radius: 50px;
+            padding: .5rem;
+
+            
+        }
+        a {
+            font-size: 2rem;
+        }
+        a:hover,
+        a:focus {
+            color: $orange;
+        }
     }
 }
 
-.formInput {
-    display: flex;
-    input,
-    a,
-    button {
-        line-height: 32px;
-        padding: 5px;
-        text-align: center;
-        margin: 5px 0;
-        width: 70%;
+button {
+    background-color: $orange;
+    color: #FFFFFF;
+    text-align: center;
+    width: 40%;
+    transition: all 0.5s;
+    cursor: pointer; 
+    text-transform: uppercase;
+}
 
-    }
-    p,
-    label {
-        text-transform: uppercase;
-                line-height: 32px;
-                    padding: 5px;
-                    text-align: center;
-                    margin: 5px 0;
-                    width: 70%;
-    }
+button span {
+    cursor: pointer;
+    position: relative;
+    transition: 0.5s;
+}
 
-    a {
-        font-size: 2rem;
-    }
+button span:after {
+    content: ' \00bb';
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
 
-    a:hover,
-    a:focus {
-        color: $orange;
-    }
+button:hover span {
+    padding-right: 25px;
+}
+
+button:hover span:after {
+    opacity: 1;
+    right: 0;
 }

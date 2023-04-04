@@ -5,7 +5,10 @@
 header {
     background: $orange;
     .logo {
-        line-height: 45px;
         margin-left: 50px;
+        width: 5%;
+    }
+    .logo:hover{
+        border: 1px dotted black;
     }
 }
