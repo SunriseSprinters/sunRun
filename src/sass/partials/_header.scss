@@ -1,5 +1,4 @@
 // header.scss
-
 @use './variables' as *;
 
 header {
@@ -7,8 +6,5 @@ header {
     .logo {
         margin-left: 50px;
         width: 5%;
-    }
-    .logo:hover{
-        border: 1px dotted black;
     }
 }

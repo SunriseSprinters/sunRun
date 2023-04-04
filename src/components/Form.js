@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-import { FiSunrise } from 'react-icons/fi'
-import { FiSunset } from 'react-icons/fi'
-import { GiRunningShoe } from 'react-icons/gi'
+import { FiSunrise } from 'react-icons/fi';
+import { FiSunset } from 'react-icons/fi';
+import { AiOutlineArrowLeft } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 
 const Form = (props) => {
     // de-structuring the props and using the passed down functions for onSubmit and onChange events.
@@ -18,6 +19,7 @@ const Form = (props) => {
     return (
         <section className="form">
             <form onSubmit={handleSubmit} action="">
+                <Link to="/" className="homepage"><AiOutlineArrowLeft/></Link>
                 <label 
                     htmlFor="date" 
                     className="sr-only">
@@ -29,6 +31,7 @@ const Form = (props) => {
                     name="date" 
                     id="date" 
                     placeholder="yyyy-mm-dd" 
+                    min={date}
                     />
                 <a onClick={handleToggle}>{toggleDisplay}</a>
                 {sunriseRun === false && 
@@ -39,7 +42,7 @@ const Form = (props) => {
                             placeholder="enter run length in minutes">
                         </input>
                     </>}
-                <button>Get Sun Data!</button> 
+                <button>let's run<span></span></button> 
             </form>
         </section>
     )
