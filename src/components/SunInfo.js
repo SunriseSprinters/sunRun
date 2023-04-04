@@ -35,7 +35,6 @@ const SunInfo = () => {
     // handle submit function to keep track of when user submit the form so that we can make the axios call to the API and retrieve the information of the Sunset and Sunrise at the Toronto coordinates
     const handleSubmit = (e) => {
         e.preventDefault();
-
         axios({
             url: "https://api.sunrise-sunset.org/json",
             params: {
@@ -50,7 +49,7 @@ const SunInfo = () => {
         .then( (apiData) => {
             setSunData(apiData.data);
             setDataReady(true);
-
+            setRunDuration('');
             // declared variable to store the object we need in order to use the react-moment library to handle time manipulation and format change in order to display the departure time 
             const sunsetObj = moment(apiData.data.results.sunset);
             const sunriseObj = moment(apiData.data.results.sunrise);
@@ -68,6 +67,7 @@ const SunInfo = () => {
                 sunriseRun={sunriseRun} 
                 handleToggle={handleToggle} 
                 sunsetRun={sunsetRun}
+                typedValue={runDuration}
             />
 
             {dataReady && <SunDisplay sunriseRun={sunriseRun} sunData={sunData} sunsetDeparture={sunsetDeparture} sunriseDeparture={sunriseDeparture} />}
