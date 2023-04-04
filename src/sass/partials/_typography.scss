@@ -14,13 +14,18 @@ h2,
 h3, 
 h4 {
     font-family: $headerFont;
+    letter-spacing: 0.05rem;
     margin: 0;
     padding: 0;
 }
 
 h1 {
     color: $headerTitle;
-    font-size: clamp(1.5rem, 10vw, 10rem);
+    font-size: clamp(1.5rem, 10vw, 8rem);
+}
+
+h3 {
+    font-size: 2rem;
 }
 
 p,
@@ -28,7 +33,7 @@ a,
 li {
     color: $blue;
     font-family: $baseFont;
-    font-size: clamp(0.8rem, 2vw, 1rem);
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
     line-height: 1.5rem;
     letter-spacing: 0.05rem;
 }
@@ -45,4 +50,12 @@ a {
 a:hover,
 a:focus {
     color: $background;
+}
+
+.instructions li {
+    color: black;
+}
+
+.arrowDownButton {
+    font-size: 3rem;
 }
