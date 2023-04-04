@@ -34,16 +34,18 @@ const Form = (props) => {
                     placeholder="yyyy-mm-dd" 
                     min={date}
                     />
-                <a onClick={handleToggle}>{toggleDisplay}</a>
+                <button type="button" onClick={handleToggle}>{toggleDisplay}</button>
                 {sunriseRun === false && 
                     <>
-                        <label className="sr-only">Length of run</label>
-                        <input 
+                        <label for="runTime"className="sr-only" >Length of run</label>
+                        <input
+                            name="runTime"
                             type="numbers" 
                             placeholder="run time (min)">
                         </input>
                     </>}
-                <button>let's run<span></span></button> 
+                <button type="submit">Let's Run</button> 
+                {/* add type to button. atm it doesnt know which is submit. preventDefault in handle submit.  */}
             </form>
         </section>
     )

@@ -4,7 +4,7 @@ const SunDisplay = (props) => {
 
     const {sunriseRun, sunData} = props;
 
-    const departureTime = sunriseRun ? sunData.results.sunrise : sunData.results.sunset
+    const departureTime = sunriseRun ? sunData.results.sunrise : sunData.results.sunset;
 
     return(
         <section className="sunDisplay">
