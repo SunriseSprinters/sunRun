@@ -1,0 +1,53 @@
+@use './variables' as *;
+
+.homePage {
+    height: 100vh;
+}
+
+.homeTextContainer {
+    height: 45vh;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+
+    img {
+        height: 12rem;
+        width: 12rem;
+        position: absolute;
+        top: 10%;
+        left: 20%;
+    }
+
+    h1 {
+        padding: 5rem 0 0 3rem;
+    }
+}
+
+.textContainer{
+    background-color: $yellow;
+    opacity: 70%;
+    width: 75%;
+    margin: 0 auto;
+    padding: 2rem;
+
+    p {
+        text-align: center;
+    }
+} 
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.arrowDownButton {
+    width: 4.5rem;
+    padding-top: 0.5rem;
+    text-align: center;
+    margin-top: 3rem;
+    background: $yellow;
+    border-radius: 50%;
+    border: none;
+    font-size: 3rem;
+    cursor: pointer;
+}

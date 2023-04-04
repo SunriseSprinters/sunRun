@@ -1,1 +1,11 @@
 // header.scss
+
+@use './variables' as *;
+
+header {
+    background: $orange;
+    .logo {
+        line-height: 45px;
+        margin-left: 50px;
+    }
+}

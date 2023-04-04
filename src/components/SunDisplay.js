@@ -1,5 +1,3 @@
-
-
 const SunDisplay = (props) => {
 
     console.log('display', props)

@@ -1,0 +1,48 @@
+// typography.scss
+@use './variables' as *;
+
+html {
+    font-size: 120%;
+}
+
+body {
+    font-family: $baseFont;
+}
+
+h1, 
+h2, 
+h3, 
+h4 {
+    font-family: $headerFont;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: $headerTitle;
+    font-size: clamp(1.5rem, 10vw, 10rem);
+}
+
+p,
+a,
+li {
+    color: $blue;
+    font-family: $baseFont;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    line-height: 1.5rem;
+    letter-spacing: 0.05rem;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    color: $background;
+}
