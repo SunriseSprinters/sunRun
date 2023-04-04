@@ -1,2 +1,88 @@
-// form.scss
+@use './_variables.scss' as *;
 
+.form {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 50px;
+    flex-shrink: 0.5;
+    form {
+        display: flex;
+        flex-direction: column;
+        background: $yellow;
+        padding: 50px;
+        height: 340px;
+        width: 50%;
+        align-content: center;
+        position: relative;
+        flex-shrink: 0.5;
+        .homepage {
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: 0;
+            text-align: left;
+        }
+        input,
+        a,
+        button{
+            width: 70%;
+            margin: 5px auto;
+            text-align: center;
+            border: none;
+            border-radius: 50px;
+            padding: .5rem;
+        }
+        button.submit {
+            width: 50%;
+        }
+        a {
+            font-size: 1.5rem;
+        }
+        a:hover,
+        a:focus {
+            color: $orange;
+        }
+    }
+}
+
+// SUBMIT BUTTON STYLING
+
+button[type="submit"] {
+    background-color: $orange;
+    color: #FFFFFF;
+    transition: all 0.5s;
+    cursor: pointer; 
+    text-transform: uppercase;
+    margin: 5px auto;
+    border: none;
+    border-radius: 50px;
+    line-height: 40px;
+    span {
+        cursor: pointer;
+        position: relative;
+        transition: 0.5s;
+    }
+    span:after {
+        content: ' \00bb';
+        opacity: 0;
+        top: 0;
+        transition: 0.5s;
+        font-size: 1.5rem;
+    }
+}
+
+button:hover span {
+    padding-right: 25px;
+}
+
+button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+// SUNINFO BUTTON STYLING
+button {
+    background: gold;
+    cursor: pointer;
+}

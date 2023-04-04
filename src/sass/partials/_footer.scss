@@ -6,10 +6,12 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100vw;
-    p {
+    p,
+    a{
         line-height: 45px;
         text-align: center;
         font-size: 0.8rem;
+        color: black;
     }
 
 }
