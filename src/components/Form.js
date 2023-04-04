@@ -28,7 +28,8 @@ const Form = (props) => {
                             type="numbers" 
                             placeholder="enter run length in minutes">
                         </input>
-                    </>}
+                    </>
+                }
                 <button>Get Sun Data!</button> 
             </form>
         </section>
