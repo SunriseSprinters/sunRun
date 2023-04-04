@@ -9,8 +9,8 @@ const Form = (props) => {
     const {handleChange, handleSubmit, handleToggle, sunriseRun} = props;
 
     const toggleDisplay = sunriseRun 
-        ? <><FiSunrise className="left"/><span className="sr-only">sunrise</span></>
-        : <><FiSunset className="right"/><span className="sr-only">sunset</span></> 
+        ? <><FiSunrise className="left"/> Sunrise<span className="sr-only">sunrise</span></>
+        : <><FiSunset className="right"/> Sunset<span className="sr-only">sunset</span></> 
 
 
     const today = new Date();
@@ -30,6 +30,7 @@ const Form = (props) => {
                     type="date" 
                     name="date" 
                     id="date" 
+                    required
                     placeholder="yyyy-mm-dd" 
                     min={date}
                     />
@@ -39,7 +40,7 @@ const Form = (props) => {
                         <label className="sr-only">Length of run</label>
                         <input 
                             type="numbers" 
-                            placeholder="enter run length in minutes">
+                            placeholder="run time (min)">
                         </input>
                     </>}
                 <button>let's run<span></span></button> 
