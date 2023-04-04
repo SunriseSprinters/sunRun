@@ -4,14 +4,14 @@
     display: flex;
     justify-content: center;
     align-content: center;
-    margin: 50px;
+    margin: 3%;
     flex-shrink: 0.5;
     form {
         display: flex;
         flex-direction: column;
         background: $yellow;
-        padding: 50px;
-        height: 340px;
+        padding: 3%;
+        height: 41.11%;
         width: 50%;
         align-content: center;
         position: relative;
@@ -26,7 +26,7 @@
         input,
         a,
         button{
-            width: 70%;
+            width: 80%;
             margin: 5px auto;
             text-align: center;
             border: none;
@@ -56,8 +56,6 @@ button[type="submit"] {
     text-transform: uppercase;
     margin: 5px auto;
     border: none;
-    border-radius: 50px;
-    line-height: 40px;
     span {
         cursor: pointer;
         position: relative;
@@ -72,17 +70,22 @@ button[type="submit"] {
     }
 }
 
-button:hover span {
+button[type="submit"]:hover span {
     padding-right: 25px;
 }
 
-button:hover span:after {
+button[type="submit"]:hover span:after {
     opacity: 1;
     right: 0;
 }
 
 // SUNINFO BUTTON STYLING
-button {
+button[type="button"] {
     background: gold;
     cursor: pointer;
+    &:hover {
+    background: rgb(255, 228, 73);
+    transition: 0.3s;
+    }
 }
+
