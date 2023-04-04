@@ -1,0 +1,14 @@
+// sunDisplay.scss
+@use './variables' as *;
+
+.sunDisplay {
+    margin: 0 auto;
+    background: $yellow;
+    width: 30%;
+    text-align: center;
+    padding: 20px;
+    span {
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+}
