@@ -44,8 +44,7 @@ const Form = (props) => {
                             placeholder="run time (min)">
                         </input>
                     </>}
-                <button type="submit">Let's Run</button> 
-                {/* add type to button. atm it doesnt know which is submit. preventDefault in handle submit.  */}
+                <button type="submit" className="submit">Let's Run<span></span></button> 
             </form>
         </section>
     )
