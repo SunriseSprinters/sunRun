@@ -17,8 +17,7 @@ const Home = () => {
 
                     <div className="textContainer">
                         <h3>Welcome to SunRun!</h3>
-                        <p>Are you a runner looking for a new and exciting way to plan your next scenic run?</p>
-                        <p>We've got you covered! Say goodbye to dull runs and hello to a more exciting workout experience with our app designed to help you plan a scenic route while keeping track of the sunrise and sunset times.</p>
+                        <p>Say goodbye to dull runs and hello to a more exciting workout experience with our app designed to help you plan a scenic route while keeping track of the sunrise and sunset times.</p>
                         
                         <ul className="instructions">
                             <li>Select the date you want to run.</li>
