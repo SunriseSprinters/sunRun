@@ -22,16 +22,16 @@
             left: 0;
             top: 0;
             text-align: left;
-            width: 40px;
+            width: 2rem;
         }
         input,
         a,
         button{
             width: 80%;
-            margin: 5px auto;
+            margin: .25rem auto;
             text-align: center;
             border: none;
-            border-radius: 50px;
+            border-radius: 2.5rem;
             padding: .5rem;
         }
         button.submit {
@@ -70,7 +70,7 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover span {
-    padding-right: 15px;
+    padding-right: .75rem;
 }
 
 button[type="submit"]:hover span:after {
