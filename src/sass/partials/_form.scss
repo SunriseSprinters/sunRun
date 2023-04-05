@@ -88,7 +88,11 @@ button[type="button"] {
     }
 }
 
-
+label {
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-left: 60px;
+}
 
 // MEDIA QUERIES
 @media (max-width: 1000px) {
