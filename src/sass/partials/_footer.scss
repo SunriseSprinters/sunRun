@@ -3,14 +3,19 @@
 
 footer {
     background: $orange;
-    position: fixed;
+    position: absolute;
     bottom: 0;
-    height: 3.5rem;
+
     width: 100vw;
     
+    p {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
     p,
     a {
-        padding-top: 1rem;
         text-align: center;
     }
 }

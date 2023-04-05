@@ -25,9 +25,7 @@
 }
 
 @media (max-width: 950px) {
-    header .logo {
-        width: 5%;
-    }
+
     .homeTextContainer img {
         top: 11%;
         left: 20%;
@@ -35,9 +33,7 @@
 }
 
 @media (max-width: 768px) {
-    header .logo {
-        width: 6%;
-    }
+
     .homeTextContainer {
         height: 30vh;
 
@@ -63,9 +59,6 @@
 }
 
 @media (max-width: 550px) {
-    header .logo {
-        width: 8%;
-    }
 
     .homeTextContainer {
         img {
@@ -87,10 +80,6 @@
 @media (max-width: 320px) {
     header {
         height: 2rem;
-
-        .logo {
-            width: 13%;
-        }
     }
 
     .homeTextContainer {
