@@ -8,7 +8,8 @@ const SunDisplay = (props) => {
 
     return(
         <section className="sunDisplay">
-            <p>Start your SunRun at: <span>{departureTime}</span></p>
+            <p>Start your SunRun at:</p>
+            <h2>{departureTime}</h2>
         </section>
     )
 }

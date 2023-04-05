@@ -1,9 +1,6 @@
 // typography.scss
 @use './variables' as *;
-
-html {
-    font-size: 120%;
-}
+// removed html font-size 120% as it is already included in setup at 125% (20px)
 
 body {
     font-family: $baseFont;
@@ -22,6 +19,14 @@ h4 {
 h1 {
     color: $headerTitle;
     font-size: clamp(1.5rem, 10vw, 8rem);
+}
+
+h2 {
+    font-size: clamp(1rem, 5vw, 3.5rem);
+}
+
+h2 {
+    font-size: clamp(1rem, 5vw, 3.5rem);
 }
 
 h2 {
