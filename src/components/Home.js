@@ -16,7 +16,7 @@ const Home = () => {
                     </div>
 
                     <div className="textContainer">
-                        <h3>Welcome to SunRun!</h3>
+                        <h2>Welcome to SunRun!</h2>
                         <p>Say goodbye to dull runs and hello to a more exciting workout experience with our app designed to help you plan a scenic route while keeping track of the sunrise and sunset times.</p>
                         
                         <ul className="instructions">
@@ -29,7 +29,9 @@ const Home = () => {
 
                     <div className="buttonContainer">
                         <Link to={`/sunApp`}>
-                            <button className="arrowDownButton"><AiOutlineArrowDown /></button>
+                            <button className="arrowDownButton"><AiOutlineArrowDown />
+                                <span className="sr-only">Click here to start planning your runs</span>
+                            </button>
                         </Link>
                     </div>
                 </div>

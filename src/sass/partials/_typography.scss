@@ -24,14 +24,13 @@ h1 {
     font-size: clamp(1.5rem, 10vw, 8rem);
 }
 
-h3 {
+h2 {
     font-size: 2rem;
 }
 
 p,
 a,
 li {
-    color: $blue;
     font-family: $baseFont;
     font-size: clamp(0.8rem, 2vw, 0.9rem);
     line-height: 1.5rem;
@@ -50,10 +49,6 @@ a {
 a:hover,
 a:focus {
     color: $background;
-}
-
-.instructions li {
-    color: black;
 }
 
 .arrowDownButton {
