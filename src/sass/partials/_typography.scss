@@ -25,7 +25,7 @@ h1 {
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: clamp(1.2rem, 4vw, 3rem);
 }
 
 p,
@@ -52,5 +52,10 @@ a:focus {
 }
 
 .arrowDownButton {
-    font-size: 3rem;
+    font-size: clamp(1rem, 6vw, 3rem);
+}
+
+footer p,
+a {
+    font-size: clamp(0.8rem, 2vw, 1rem);
 }

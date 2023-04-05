@@ -1,1 +1,115 @@
 @use './variables' as *;
+
+// Landing Page 
+@media (max-width: 1280px) {
+
+    header {
+        height: 2.5rem;
+    }
+
+    footer {
+        height: 2.5rem;
+    }
+
+    .homeTextContainer {
+        height: 35vh;
+    }
+
+    .textContainer {
+        width: 85%;
+    }
+    
+    .arrowDownButton {
+        margin: 1rem 0 2rem 0;
+    }
+}
+
+@media (max-width: 950px) {
+    header .logo {
+        width: 5%;
+    }
+    .homeTextContainer img {
+        top: 11%;
+        left: 20%;
+    }
+}
+
+@media (max-width: 768px) {
+    header .logo {
+        width: 6%;
+    }
+    .homeTextContainer {
+        height: 30vh;
+
+        img {
+            top: 7%;
+            left: 16%;
+        }
+    }
+
+    .textContainer {
+        width: 90%;
+        margin-top: 1rem;
+        padding: 0.5rem;
+    }
+
+    .instructions {
+        width: 65%;
+    }
+
+    .arrowDownButton {
+        width: 3rem;
+    }
+}
+
+@media (max-width: 550px) {
+    header .logo {
+        width: 8%;
+    }
+
+    .homeTextContainer {
+        img {
+            height: 7rem;
+            width: 7rem;
+        }
+    }
+
+    .textContainer {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .buttonContainer .arrowDownButton {
+        width: 3rem;
+    }
+}
+
+@media (max-width: 320px) {
+    header {
+        height: 2rem;
+
+        .logo {
+            width: 13%;
+        }
+    }
+
+    .homeTextContainer {
+        height: 23vh;
+
+        img {
+            height: 5rem;
+            width: 5rem;
+            top: 9%;
+            left: 12%;
+        }
+    }
+
+    .instructions {
+        width: 90%;
+    }
+
+    .buttonContainer .arrowDownButton {
+        width: 2rem;
+        margin: 1rem 0;
+    }
+}

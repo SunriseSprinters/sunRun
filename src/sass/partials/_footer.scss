@@ -5,13 +5,12 @@ footer {
     background: $orange;
     position: fixed;
     bottom: 0;
+    height: 3.5rem;
     width: 100vw;
+    
     p,
-    a{
-        line-height: 45px;
+    a {
+        padding-top: 1rem;
         text-align: center;
-        font-size: 0.8rem;
-        color: black;
     }
-
 }
