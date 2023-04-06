@@ -6,10 +6,11 @@ import moment from 'moment';
 // COMPONENTS
 import Form from "./Form";
 import SunDisplay from './SunDisplay';
+import SideBar from "./SideBar";
 
 // // FIREBASE
-// import app from '../firebase.js';
-// import { ref, getDatabase, push } from 
+import app from '../firebase.js';
+import { ref, getDatabase, push } from 'firebase/database';
 
 const SunInfo = () => {
     // initializing state to keep track of the data we retrieve on the axios call on the sunrise-sunset api
@@ -30,7 +31,6 @@ const SunInfo = () => {
     const handleChange = (e) => {
         setDateInput(e.target.value);
         console.log(e.target.value)
-
     }
 
     const handleToggle = () => {
@@ -42,16 +42,16 @@ const SunInfo = () => {
     }
 
     // // function use to control the star save button on SunDisplay
-    // const handleClick = (e) => {
-    //     const db = getDatabase(app);
-    //     const dbRef = ref(db); 
+    const handleClick = (e) => {
+        const db = getDatabase(app);
+        const dbRef = ref(db); 
         
-    //     dbRef.push({
-    //         date: {dateInput},
-    //         startTime: ,
-    //         sunset: 
-    //     })
-    // }
+        push(dbRef, {
+            date: sunriseRun ? sunriseDate : sunsetDate,
+            startTime: sunriseRun ? sunriseTime : sunsetTime,
+            sunset: sunriseRun ? "Sunrise" : "Sunset"
+        })
+    }
 
     // handle submit function to keep track of when user submit the form so that we can make the axios call to the API and retrieve the information of the Sunset and Sunrise at the Toronto coordinates
     const handleSubmit = (e) => {
@@ -90,6 +90,7 @@ const SunInfo = () => {
     return (
         // passing the handleChange and handleSubmit functions as props so that the <Form /> component have access to it
         <div className="sunInfoPage">
+            <SideBar />
             <Form 
                 handleChange={handleChange} 
                 handleSubmit={handleSubmit} 
@@ -101,6 +102,7 @@ const SunInfo = () => {
             />
 
             {errorMessage.length < 1 ? dataReady && <SunDisplay 
+                handleClick={handleClick}
                 sunriseRun={sunriseRun} 
                 sunData={sunData} 
                 sunsetDate={sunsetDate} 

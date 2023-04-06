@@ -19,7 +19,6 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <SavedRuns />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/sunApp' element={<SunInfo />} />

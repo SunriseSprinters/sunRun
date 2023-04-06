@@ -1,9 +1,10 @@
 // SavedRuns.js
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { getDatabase, ref, onValue, push, remove } from 'firebase/database';
 
 import app from '../firebase';
+import SavedRuns from './SavedRuns';
 
 // ASSETS
 import * as IoIcons from 'react-icons/io';
@@ -27,19 +28,21 @@ const SideBar = () => {
         const arrayOfRuns = []
         // Save our response in a variable
         const dataResponse = response.val();
-        // console.log(dataResponse)
+        console.log(dataResponse)
         // Data is an object so we iterate using a for-in loop to access each saved run object
-        for(let key in dataResponse) {
-            // Push each saved run object to an array we created in arrayOfRuns
-            arrayOfRuns.push()
-        }
+        // for(let key in dataResponse) {
+        //     // Push each saved run object to an array we created in arrayOfRuns
+        //     arrayOfRuns.push()
+        // }
     })
 
 }, [])
 
     return (
+        // <h2>Hellooooodljfdsjfls</h2>
         <section className="savedRuns">
             <div className="openMenu">
+            <SavedRuns />
             <Link to ="#" className="sideButton" onClick={openSidebar}>
                 <p>Saved Runs</p>
                     {sidebar ? <IoIcons.IoIosArrowForward /> : <IoIcons.IoIosArrowBack /> }
