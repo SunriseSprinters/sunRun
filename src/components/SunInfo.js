@@ -1,10 +1,15 @@
 import axios from "axios";
 import { useState } from "react";
-import Form from "./Form";
-import SunDisplay from './SunDisplay';
 import React  from 'react';
 import moment from 'moment';
 
+// COMPONENTS
+import Form from "./Form";
+import SunDisplay from './SunDisplay';
+
+// // FIREBASE
+// import app from '../firebase.js';
+// import { ref, getDatabase, push } from 
 
 const SunInfo = () => {
     // initializing state to keep track of the data we retrieve on the axios call on the sunrise-sunset api
@@ -35,6 +40,19 @@ const SunInfo = () => {
     const sunsetRun = (e) => {
         setRunDuration(e.target.value);
     }
+
+    // // function use to control the star save button on SunDisplay
+    // const handleClick = (e) => {
+    //     const db = getDatabase(app);
+    //     const dbRef = ref(db); 
+        
+    //     dbRef.push({
+    //         date: {dateInput},
+    //         startTime: ,
+    //         sunset: 
+    //     })
+    // }
+
     // handle submit function to keep track of when user submit the form so that we can make the axios call to the API and retrieve the information of the Sunset and Sunrise at the Toronto coordinates
     const handleSubmit = (e) => {
         e.preventDefault();
