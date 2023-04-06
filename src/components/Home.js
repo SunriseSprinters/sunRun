@@ -1,11 +1,10 @@
 import { Link } from "react-router-dom";
+import { AiOutlineArrowDown, AiOutlineExpandAlt, AiOutlineClose } from 'react-icons/ai';
 import 'animate.css'
 import sunsetIcon from "../assets/sunset.png"
 
-// ASSETS
-import { AiOutlineArrowDown } from 'react-icons/ai';
-
 const Home = () => {
+
     return (
         <main>
             <section className="homePage">
@@ -16,20 +15,17 @@ const Home = () => {
                     </div>
 
                     <div className="textContainer">
-                        <h3>Welcome to SunRun!</h3>
+                        <h2>Welcome to SunRun!</h2>
                         <p>Say goodbye to dull runs and hello to a more exciting workout experience with our app designed to help you plan a scenic route while keeping track of the sunrise and sunset times.</p>
                         
-                        <ul className="instructions">
-                            <li>Select the date you want to run.</li>
-                            <li>Pick sunrise or sunset.</li>
-                            <li>If you selected <em>sunset</em>, enter the duration of your run, but in minutes! </li>
-                        </ul>
                         <p>Click the arrow below to start planning!</p>
                     </div>
 
                     <div className="buttonContainer">
                         <Link to={`/sunApp`}>
-                            <button className="arrowDownButton"><AiOutlineArrowDown /></button>
+                            <button className="arrowDownButton"><AiOutlineArrowDown />
+                                <span className="sr-only">Click here to start planning your runs</span>
+                            </button>
                         </Link>
                     </div>
                 </div>
