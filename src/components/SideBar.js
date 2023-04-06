@@ -11,7 +11,7 @@ import * as IoIcons from 'react-icons/io';
 
 const SideBar = () => {
 
-    const [arrayOfRuns, setArrayOfRuns] = useState([]);
+    const [runState, setRunState] = useState([]);
     const [sidebar, setSidebar] = useState(false);
     const openSidebar = () => {
         setSidebar(!sidebar);
@@ -30,16 +30,23 @@ const SideBar = () => {
         const dataResponse = response.val();
         console.log(dataResponse)
         // Data is an object so we iterate using a for-in loop to access each saved run object
-        // for(let key in dataResponse) {
-        //     // Push each saved run object to an array we created in arrayOfRuns
-        //     arrayOfRuns.push()
-        // }
+        for(let key in dataResponse) {
+            const userRun = {
+                id: key,
+                time: dataResponse[key].startTime,
+                date: dataResponse[key].date,
+                sunMode: dataResponse[key].sunset
+            }
+            // Push each saved run object to an array we created in arrayOfRuns
+            arrayOfRuns.push(userRun)
+        }
+        console.log(arrayOfRuns);
+        setRunState(arrayOfRuns);
+        console.log(runState);
     })
-
 }, [])
 
     return (
-        // <h2>Hellooooodljfdsjfls</h2>
         <section className="savedRuns">
             <div className="openMenu">
             <SavedRuns />
@@ -51,10 +58,11 @@ const SideBar = () => {
             <div className={sidebar ? 'sidebar active' : 'sidebar'}>
                 <div className="sidebarContainer" onClick={openSidebar}>
                     <ul className="sidebarItems">
-                        {/* this is hardcoded for now */}
-                        <li>test</li>
-                        <li>test</li>
-                        <li>test</li>
+                        {runState.map((userRun) => {
+                            return (
+                                <SavedRuns key={userRun.id} time={userRun.time} date={userRun.date} sunMode={userRun.sunMode} />
+                            )
+                        })}
                     </ul>
                 </div>
             </div>
