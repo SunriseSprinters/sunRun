@@ -3,11 +3,30 @@
 
 header {
     position: fixed;
-    width: 100%;
     background: $orange;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
     
     .logo {
-        margin-left: 50px;
-        width: 5%;
+        margin-left: 2.5rem;
+        width: 3rem;
+    }
+
+    .themeButton{
+        margin-right: 2.5rem;
+        width: 3rem;
+        border-style: none;
+        background-color: rgba( 0, 0, 0, 0);
+        cursor: pointer;
+    }
+}
+
+.dark header {
+    background: $blue;
+
+    button {
+        color: $white;
     }
 }

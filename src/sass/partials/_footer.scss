@@ -2,16 +2,28 @@
 @use './variables' as *;
 
 footer {
-    background: $orange;
     position: fixed;
     bottom: 0;
     width: 100vw;
     p,
     a{
-        line-height: 45px;
         text-align: center;
         font-size: 0.8rem;
-        color: black;
+        line-height: 1.6rem;
     }
 
+}
+
+.light footer {
+    background: $orange;
+    p, a{
+        color: black;
+    }
+}
+
+.dark footer {
+    background: $blue;
+    p, a{
+        color: white
+    }
 }

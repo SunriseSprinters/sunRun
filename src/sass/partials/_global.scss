@@ -6,8 +6,12 @@
     padding: 0;
 }
 
-body {
-    background: $background;
+.light {
+    background-color: $background;
+}
+
+.dark {
+    background-color: $blue;
 }
 
 .wrapper {
@@ -26,5 +30,5 @@ img {
 }
 
 ul {
-    padding-left: 0px;
+    padding-left: 0;
 }

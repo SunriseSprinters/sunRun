@@ -1,11 +1,13 @@
 import './sass/App.scss';
 import 'animate.css';
+import { useState } from 'react';
 
-
+// COMPONENTS
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './components/Home';
 import SunInfo from './components/SunInfo';
+import SavedRuns from './components/SavedRuns';
 
 
 import { Route, Routes } from 'react-router-dom';
@@ -13,9 +15,22 @@ import { Route, Routes } from 'react-router-dom';
 // App.js hold the routes of SunRun. The <Home /> component will be our default home page and <SunInfo /> will be our main app component where the <Form /> and <Display /> component will live
 
 function App() {
+
+  // Declared state to track which theme the page is currently displaying, set to light on page load.
+  const [pageTheme, setPageTheme] = useState('light');
+  // declared toggle function to flip theme from light to dark. Need to pass as prop to header
+  const toggleTheme = () => {
+    if (pageTheme === 'light') {
+      setPageTheme('dark')
+    } else {
+      setPageTheme('light')
+    }
+  }
+
   return (
-    <div className="App">
-      <Header />
+    <div className={`App ${pageTheme}`}>
+      <Header toggleTheme={toggleTheme} pageTheme={pageTheme}/>
+      <SavedRuns />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/sunApp' element={<SunInfo />} />

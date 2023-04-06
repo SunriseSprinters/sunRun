@@ -67,3 +67,13 @@
         cursor: pointer;
     }
 }
+
+.dark {
+    .textContainer{
+        background: $white;
+    }
+
+    .arrowDownButton {
+        background: $white;
+    }
+}

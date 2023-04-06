@@ -4,15 +4,15 @@
     display: flex;
     justify-content: center;
     align-content: center;
-    margin: 50px;
+    padding-top: 15vh;
+    margin-bottom: 3%;
     flex-shrink: 0.5;
     form {
         display: flex;
         flex-direction: column;
         background: $yellow;
-        padding: 50px;
-        height: 340px;
-        width: 50%;
+        padding: 3%;
+        width: 55%;
         align-content: center;
         position: relative;
         flex-shrink: 0.5;
@@ -22,15 +22,16 @@
             left: 0;
             top: 0;
             text-align: left;
+            width: 2rem;
         }
         input,
         a,
         button{
-            width: 70%;
-            margin: 5px auto;
+            width: 80%;
+            margin: .25rem auto;
             text-align: center;
             border: none;
-            border-radius: 50px;
+            border-radius: 2.5rem;
             padding: .5rem;
         }
         button.submit {
@@ -54,13 +55,9 @@ button[type="submit"] {
     transition: all 0.5s;
     cursor: pointer; 
     text-transform: uppercase;
-    margin: 5px auto;
     border: none;
-    border-radius: 50px;
-    line-height: 40px;
     span {
         cursor: pointer;
-        position: relative;
         transition: 0.5s;
     }
     span:after {
@@ -68,21 +65,75 @@ button[type="submit"] {
         opacity: 0;
         top: 0;
         transition: 0.5s;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 }
 
-button:hover span {
-    padding-right: 25px;
+button[type="submit"]:hover span {
+    padding-right: .75rem;
 }
 
-button:hover span:after {
+button[type="submit"]:hover span:after {
     opacity: 1;
     right: 0;
 }
 
 // SUNINFO BUTTON STYLING
-button {
+button[type="button"] {
     background: gold;
     cursor: pointer;
+    &:hover {
+    background: rgb(255, 228, 73);
+    transition: 0.3s;
+    }
+}
+
+label {
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-left: 60px;
+}
+
+// LIGHT AND DARK COLOURS
+
+.dark {
+    .form form {
+    background: $white;
+}
+    button[type="submit"] {
+        background-color: $blue;
+        color: #FFFFFF;
+    }
+    button[type="button"] {
+        background: $blue;
+        color: $white;
+        &:hover {
+        background: rgb(35, 50, 90);
+        }
+    }
+}
+
+// MEDIA QUERIES
+@media (max-width: 1000px) {
+    .form form {
+        width: 65%;
+    }
+}
+
+@media (max-width: 700px) {
+    .form form {
+        width: 75%;
+    }
+}
+
+@media (max-width: 543px) {
+    .form form {
+        width: 80%;
+    }
+}
+
+@media (max-width: 419px) {
+    .form form {
+        width: 85%;
+    }
 }
