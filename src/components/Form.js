@@ -38,6 +38,7 @@ const Form = (props) => {
                     <>
                         <label htmlFor="runTime" >Length of run</label>
                         <input
+                            
                             name="runTime"
                             onChange={sunsetRun}
                             type="number" 
