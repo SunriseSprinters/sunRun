@@ -1,55 +1,5 @@
 @use './variables' as *;
 
-<<<<<<<<< Temporary merge branch 1
-// *************
-// SunDisplay.js
-// *************
-@media (max-width: 700px) {
-    .sunDisplay {
-        width: 50%;
-    }
-
-    h2 {
-        font-size: clamp(2rem, 3.5vw, 4rem);
-    }
-}
-
-@media (max-width: 543px) {
-    .sunDisplay {
-        width: 65%;
-    }
-}
-
-@media (max-width: 419px) {
-    .sunDisplay {
-        width: 75%;
-    }
-}
-
-@media (max-width: 363px) {
-    h2 {
-        font-size: clamp(1.7rem, 3.5vw, 4rem);
-    }
-}
-
-// *************
-// Footer.js
-// *************
-@media (max-width: 658px) {
-    footer span {
-        display: block;
-    }
-
-    footer p,
-    footer a {
-        line-height: 1rem;
-    }
-}
-
-// *************
-// Form.js
-// *************
-=========
 // Landing Page 
 @media (max-width: 1280px) {
 
@@ -189,12 +139,3 @@
         line-height: 1rem;
     }
 }
-
-// *************
-// Form.js
-// *************
-
-
-// *************
-// Form.js
-// *************

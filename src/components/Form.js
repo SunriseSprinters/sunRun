@@ -20,8 +20,7 @@ const Form = (props) => {
             <form onSubmit={handleSubmit} action="">
                 <Link to="/" className="homepage"><AiOutlineArrowLeft/></Link>
                 <label 
-                    htmlFor="date" 
-                    className="sr-only">
+                    htmlFor="date" >
                         date
                     </label>
                 <input 
@@ -34,17 +33,18 @@ const Form = (props) => {
                     min={date}
                     value={props.dateInput}
                     />
-                <button type="button" onClick={handleToggle}>{toggleDisplay}</button>
+                <label htmlFor="runTime" >Run at</label><button type="button" onClick={handleToggle}>{toggleDisplay}</button>
                 {sunriseRun === false && 
                     <>
-                        <label htmlFor="runTime"className="sr-only" >Length of run</label>
+                        <label htmlFor="runTime" >Length of run</label>
                         <input
                             name="runTime"
                             onChange={sunsetRun}
-                            type="numbers" 
+                            type="number" 
                             placeholder="run time (min)"
                             required
-                            value={props.typedValue}>
+                            value={props.typedValue}
+                            min="1">
                         </input>
                     </>}
                 <button type="submit" className="submit">Let's Run<span></span></button> 
