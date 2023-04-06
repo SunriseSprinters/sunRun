@@ -2,16 +2,23 @@
 @use './variables' as *;
 
 footer {
-    position: fixed;
+    background: $orange;
+    position: absolute;
     bottom: 0;
+
     width: 100vw;
-    p,
-    a{
-        text-align: center;
-        font-size: 0.8rem;
-        line-height: 1.6rem;
+    
+    p {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
+    p,
+
+    a {
+        text-align: center;
+    }
 }
 
 .light footer {

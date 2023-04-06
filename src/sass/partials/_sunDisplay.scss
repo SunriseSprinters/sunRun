@@ -7,6 +7,20 @@
     width: 40%;
     text-align: center;
     padding: 1rem .5rem;
+
+    span {
+        display: inline-block;
+    }
+    position: relative;
+    .star {
+        border: none;
+        background: none;
+        cursor: pointer;
+        position: absolute;
+        right: 0;
+        font-size: 1.5rem;
+        margin-right: 1rem;
+    }
 }
 
 .dark .sunDisplay{

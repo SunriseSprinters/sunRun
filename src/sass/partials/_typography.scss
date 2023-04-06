@@ -25,14 +25,16 @@ h2 {
     font-size: clamp(1rem, 5vw, 3.5rem);
 }
 
-h3 {
-    font-size: 2rem;
+h2 {
+    font-size: clamp(1rem, 5vw, 3.5rem);
+}
+
+    font-size: clamp(1.2rem, 4vw, 3rem);
 }
 
 p,
 a,
 li {
-    color: $blue;
     font-family: $baseFont;
     font-size: clamp(0.8rem, 2vw, 0.9rem);
     line-height: 1.5rem;
@@ -53,10 +55,12 @@ a:focus {
     color: $background;
 }
 
-.instructions li {
-    color: black;
+.arrowDownButton {
+    font-size: clamp(1rem, 6vw, 3rem);
 }
 
-.arrowDownButton {
-    font-size: 3rem;
+footer p,
+a
+    {
+    font-size: clamp(0.8rem, 2vw, 1rem);
 }
