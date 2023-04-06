@@ -17,7 +17,7 @@ const themeToggleIcon = pageTheme === 'light'
         <header>
             <Link to="/">
                 <figure className="logo">
-                    <img src={Logo} alt="Sun Run logo"/>
+                    <span className="sr-only">Logo and navigation to home.</span>
                 </figure>
             </Link>
             <button onClick={toggleTheme} className="themeButton">{themeToggleIcon}</button>

@@ -12,6 +12,10 @@ header {
     .logo {
         margin-left: 2.5rem;
         width: 3.5rem;
+        background-image: url('/assets/Logo.png');
+        height: 3.5rem;
+        background-size: contain;
+        background-position: center;
     }
 
     .themeButton{
@@ -29,4 +33,8 @@ header {
     button {
         color: $white;
     }
+}
+
+.dark .logo {
+    background-image: url('/assets/sunLogo.png');
 }
