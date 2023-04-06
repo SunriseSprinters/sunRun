@@ -13,7 +13,7 @@ const SunInfo = () => {
     const [dateInput, setDateInput] = useState('');
     const [sunriseRun, setSunriseRun] = useState(true);
     const [dataReady, setDataReady] = useState();
-    const [runDuration, setRunDuration] = useState(null);
+    const [runDuration, setRunDuration] = useState('');
     const [sunsetDeparture, setSunsetDeparture] = useState(null);
     const [sunriseDeparture, setSunriseDeparture] = useState(null);
 

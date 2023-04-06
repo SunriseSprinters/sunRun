@@ -1,0 +1,32 @@
+.savedRuns {
+    position: absolute;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+    color: #fff;
+    height: 100vh;
+}
+
+.sideButton {
+    display: flex;
+    p {
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        transform: rotate(180deg);
+    }
+}
+
+.sidebar {
+    background: rgba(0, 0, 0, 0.69);
+    width: 14rem;
+    right: -100%;
+    position: fixed;
+    transition: 1s;
+    display: flex;
+}
+
+.sidebar.active {
+    right: 0;
+    transition: 1s;
+}
