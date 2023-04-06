@@ -6,9 +6,11 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './components/Home';
 import SunInfo from './components/SunInfo';
+import Error from './components/Error';
 
 
 import { Route, Routes } from 'react-router-dom';
+
 
 // App.js hold the routes of SunRun. The <Home /> component will be our default home page and <SunInfo /> will be our main app component where the <Form /> and <Display /> component will live
 
@@ -19,6 +21,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/sunApp' element={<SunInfo />} />
+        <Route path='/*' element={<Error />} />
       </Routes>
       <Footer />
     </div>

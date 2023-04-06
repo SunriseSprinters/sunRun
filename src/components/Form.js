@@ -39,9 +39,10 @@ const Form = (props) => {
                     <>
                         <label htmlFor="runTime"className="sr-only" >Length of run</label>
                         <input
+                            min="1"
                             name="runTime"
                             onChange={sunsetRun}
-                            type="numbers" 
+                            type="number" 
                             placeholder="run time (min)"
                             required
                             value={props.typedValue}>

@@ -13,9 +13,12 @@ const SunInfo = () => {
     const [dateInput, setDateInput] = useState('');
     const [sunriseRun, setSunriseRun] = useState(true);
     const [dataReady, setDataReady] = useState();
-    const [runDuration, setRunDuration] = useState(null);
-    const [sunsetDeparture, setSunsetDeparture] = useState(null);
-    const [sunriseDeparture, setSunriseDeparture] = useState(null);
+    const [runDuration, setRunDuration] = useState('');
+    const [sunsetDate, setSunsetDate] = useState(null);
+    const [sunsetTime, setSunsetTime] = useState(null);
+    const [sunriseDate, setSunriseDate] = useState(null);
+    const [sunriseTime, setSunriseTime] = useState(null);
+    const [errorMessage, setErrorMessage] = useState('')
 
 
     // function used to keep track of the user input on the form
@@ -47,15 +50,23 @@ const SunInfo = () => {
         })
         // updating the sunData state with the api data
         .then( (apiData) => {
+            setErrorMessage('');
             setSunData(apiData.data);
             setDataReady(true);
             setRunDuration('');
             // declared variable to store the object we need in order to use the react-moment library to handle time manipulation and format change in order to display the departure time 
+            // console.log(apiData.data)
             const sunsetObj = moment(apiData.data.results.sunset);
             const sunriseObj = moment(apiData.data.results.sunrise);
-            setSunsetDeparture(sunsetObj.subtract(runDuration, 'm').format('LLL'));
-            setSunriseDeparture(sunriseObj.format('LLL'));
+            setSunsetDate(sunsetObj.format('ll'));
+            setSunsetTime(sunsetObj.subtract(runDuration, 'm').format('LT'));
+            setSunriseDate(sunriseObj.format('ll'));
+            setSunriseTime(sunriseObj.format('LT'));
             })
+            .catch(function (error) {
+                setErrorMessage(error.toJSON().message);
+            });
+            console.log(sunsetDate);
     }
 
     return (
@@ -71,7 +82,14 @@ const SunInfo = () => {
                 dateInput={dateInput}
             />
 
-            {dataReady && <SunDisplay sunriseRun={sunriseRun} sunData={sunData} sunsetDeparture={sunsetDeparture} sunriseDeparture={sunriseDeparture} />}
+            {errorMessage.length < 1 ? dataReady && <SunDisplay 
+                sunriseRun={sunriseRun} 
+                sunData={sunData} 
+                sunsetDate={sunsetDate} 
+                sunsetTime={sunsetTime}
+                sunriseDate={sunriseDate}
+                sunriseTime={sunriseTime}
+                /> : <h3 className="axiosErrorMessage">{errorMessage}</h3>}
         </div>
     )
 }
