@@ -1,12 +1,13 @@
 import './sass/App.scss';
 import 'animate.css';
 
-
+// COMPONENTS
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './components/Home';
 import SunInfo from './components/SunInfo';
 import Error from './components/Error';
+import SavedRuns from './components/SavedRuns';
 
 
 import { Route, Routes } from 'react-router-dom';
@@ -18,6 +19,7 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <SavedRuns />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/sunApp' element={<SunInfo />} />
