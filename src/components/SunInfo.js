@@ -41,7 +41,7 @@ const SunInfo = () => {
         axios({
             url: "https://api.sunrise-sunset.org/json",
             params: {
-              // Googled for Toronto's long and lat 
+            //   Googled for Toronto's long and lat 
                 lat: 43.651070,
                 lng: -79.347015,
                 date: dateInput,
@@ -65,6 +65,7 @@ const SunInfo = () => {
             })
             .catch(function (error) {
                 setErrorMessage(error.toJSON().message);
+                console.log(error.toJSON());
             });
             console.log(sunsetDate);
     }
