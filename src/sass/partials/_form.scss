@@ -94,6 +94,25 @@ label {
     margin-left: 60px;
 }
 
+// LIGHT AND DARK COLOURS
+
+.dark {
+    .form form {
+    background: $white;
+}
+    button[type="submit"] {
+        background-color: $blue;
+        color: #FFFFFF;
+    }
+    button[type="button"] {
+        background: $blue;
+        color: $white;
+        &:hover {
+        background: rgb(35, 50, 90);
+        }
+    }
+}
+
 // MEDIA QUERIES
 @media (max-width: 1000px) {
     .form form {

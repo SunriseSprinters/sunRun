@@ -6,8 +6,16 @@
     padding: 0;
 }
 
-body {
-    background: $background;
+.App {
+    height: 100vh;
+}
+
+.light {
+    background-color: $background;
+}
+
+.dark {
+    background-color: $blue;
 }
 
 .wrapper {

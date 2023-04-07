@@ -1,22 +1,18 @@
 @use './variables' as *;
 
-.homePage {
-    height: 100vh;
-}
-
 .homeTextContainer {
-    height: 35vh;
-    padding: 3rem 0;
+    height: 40vh;
+    padding-top: 3rem;
     display: flex; 
     justify-content: center;
     align-items: center;
 
     img {
-        height: 10rem;
-        width: 10rem;
+        height: 8rem;
+        width: 8rem;
         position: absolute;
-        top: 7%;
-        left: 20%;
+        top: 12%;
+        left: 23%;
     }
 
     h1 {
@@ -31,7 +27,7 @@
     background-color: $yellow;
     opacity: 70%;
 
-    h3 {
+    h2 {
         text-align: center;
         padding-bottom: 1rem;
     }
@@ -41,22 +37,12 @@
     }
 } 
 
-.instructions {
-    width: 70%;
-    padding: 1rem 0;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    list-style-type: "📍";
-}
-
 .buttonContainer {
     display: flex;
     justify-content: center;
 
     .arrowDownButton {
-        width: 4.5rem;
+        width: 4rem;
         margin: 2rem 0;
         padding-top: 0.5rem;
         background: $yellow;
@@ -65,5 +51,21 @@
         border: none;
         text-align: center;
         cursor: pointer;
+        transition: 0.3s ease, color 0.3s ease;
+    }
+
+    button:hover, 
+    button:focus {
+        background: $orange;
+    }
+}
+
+.dark {
+    .textContainer{
+        background: $white;
+    }
+
+    .arrowDownButton {
+        background: $white;
     }
 }
