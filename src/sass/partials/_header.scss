@@ -2,7 +2,7 @@
 @use './variables' as *;
 
 header {
-    position: fixed;
+    position: relative;
     background: $orange;
     width: 100%;
     display: flex;

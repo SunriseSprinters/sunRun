@@ -13,7 +13,9 @@ const SideBar = () => {
 
     const [runState, setRunState] = useState([]);
     const [sidebar, setSidebar] = useState(false);
+    const [openMenu, setOpenMenu] = useState(false);
     const openSidebar = () => {
+        setOpenMenu(!openMenu);
         setSidebar(!sidebar);
     }
 
@@ -48,8 +50,8 @@ const SideBar = () => {
 
     return (
         <section className="savedRuns">
-            <div className="openMenu">
-            <SavedRuns />
+            <div className={openMenu ? "openMenu active" : 'openMenu'}>
+            {/* <SavedRuns /> */}
             <Link to ="#" className="sideButton" onClick={openSidebar}>
                 <p>Saved Runs</p>
                     {sidebar ? <IoIcons.IoIosArrowForward /> : <IoIcons.IoIosArrowBack /> }
