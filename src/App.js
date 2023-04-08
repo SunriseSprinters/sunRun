@@ -32,7 +32,6 @@ function App() {
   return (
     <div className={`App ${pageTheme}`}>
       <Header toggleTheme={toggleTheme} pageTheme={pageTheme}/>
-      <SavedRuns />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/sunApp' element={<SunInfo />} />

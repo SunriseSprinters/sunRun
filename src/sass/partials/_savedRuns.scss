@@ -1,3 +1,5 @@
+@use './variables' as *;
+
 .savedRuns {
     position: absolute;
     right: 0;
@@ -5,7 +7,14 @@
     justify-content: flex-end;
     align-content: center;
     color: #fff;
-    height: 100vh;
+    top: 0;
+    z-index: 10;
+
+    a:hover,
+    a:focus {
+        color: $red;
+        transition: 1s;
+    }
 }
 
 .sideButton {
@@ -20,7 +29,7 @@
 .sidebar {
     background: rgba(0, 0, 0, 0.69);
     width: 14rem;
-    // right: -100%;
+    right: -100%;
     position: fixed;
     transition: 1s;
     display: flex;
@@ -29,4 +38,16 @@
 .sidebar.active {
     right: 0;
     transition: 1s;
+    overflow: scroll;
+    height: 100%;
 }
+
+.openMenu.active {
+    transition: 2s;
+    width: 16.2rem;
+    
+}
+
+// .openMenu {
+//     transition: 2s;
+// }
