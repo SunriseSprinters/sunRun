@@ -12,9 +12,10 @@ import * as IoIcons from 'react-icons/io';
 const SavedRuns = (props) => {
 
     return (
-        <li>
-            <button className="star" onClick={props.handleClick}>
-                <BsIcons.BsStarFill />
+        <li className="userSavedRuns" id={props.id} >
+            <button type="button" id={props.id} onClick={props.handleRemove} className="star">
+                {/* <BsIcons.BsStarFill /> */}
+                ⭐️
             </button>
             <p className='savedDate'>Date: {props.date}</p>
             <p className='savedSun'>{props.sunMode}</p>
