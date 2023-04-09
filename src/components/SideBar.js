@@ -11,6 +11,12 @@ import * as IoIcons from 'react-icons/io';
 
 const SideBar = () => {
 
+    // Variable to hold db details:
+    const database = getDatabase(app);
+    // Variable that references our db:
+    const dbRef = ref(database);
+
+    const [keyArray, setKeyArray] = useState([]);
     const [runState, setRunState] = useState([]);
     const [sidebar, setSidebar] = useState(false);
     const [openMenu, setOpenMenu] = useState(false);
@@ -19,34 +25,51 @@ const SideBar = () => {
         setSidebar(!sidebar);
     }
 
+    
     useEffect(() => {
-    // Variable to hold db details:
-    const database = getDatabase(app);
-    // Variable that references our db:
-    const dbRef = ref(database);
-    // Event listener that will fire from the db and call the data 'response'
-    onValue(dbRef, (response) => {
-        // Variable to store the new state we're creating
-        const arrayOfRuns = []
-        // Save our response in a variable
-        const dataResponse = response.val();
-        console.log(dataResponse)
-        // Data is an object so we iterate using a for-in loop to access each saved run object
-        for(let key in dataResponse) {
-            const userRun = {
-                id: key,
-                time: dataResponse[key].startTime,
-                date: dataResponse[key].date,
-                sunMode: dataResponse[key].sunset
+        // Event listener that will fire from the db and call the data 'response'
+        onValue(dbRef, (response) => {
+
+            let idArray = [];
+            // Variable to store the new state we're creating
+            const arrayOfRuns = []
+            // Save our response in a variable
+            const dataResponse = response.val();
+
+            // Data is an object so we iterate using a for-in loop to access each saved run object
+            for(let key in dataResponse) {
+                const userRun = {
+                    id: key,
+                    time: dataResponse[key].startTime,
+                    date: dataResponse[key].date,
+                    sunMode: dataResponse[key].sunset
+                }
+
+                idArray.push(userRun);
+
+                // Push each saved run object to an array we created in arrayOfRuns
+                arrayOfRuns.push(userRun)
             }
-            // Push each saved run object to an array we created in arrayOfRuns
-            arrayOfRuns.push(userRun)
-        }
-        console.log(arrayOfRuns);
-        setRunState(arrayOfRuns);
-        console.log(runState);
-    })
-}, [])
+            setKeyArray(idArray);
+            // console.log(arrayOfRuns);
+            setRunState(arrayOfRuns);
+            // console.log(runState);
+        })
+    }, [])
+
+    const handleRemove = (e) => {
+        console.log(keyArray);
+        console.log(e.target.id);
+        // const userRef = e.target.id
+
+        removeUser(e.target.id);
+    }
+
+    const removeUser = (id) => {
+        const userRef = ref(database, `/${id}`)
+        remove(userRef);
+    }
+    
 
     return (
         <section className="savedRuns">
@@ -58,11 +81,17 @@ const SideBar = () => {
             </Link>
             </div>
             <div className={sidebar ? 'sidebar active' : 'sidebar'}>
-                <div className="sidebarContainer" onClick={openSidebar}>
+                <div className="sidebarContainer">
                     <ul className="sidebarItems">
                         {runState.map((userRun) => {
                             return (
-                                <SavedRuns key={userRun.id} time={userRun.time} date={userRun.date} sunMode={userRun.sunMode} />
+                                <SavedRuns 
+                                    id={userRun.id}
+                                    key={userRun.id} 
+                                    time={userRun.time} 
+                                    date={userRun.date} 
+                                    sunMode={userRun.sunMode} 
+                                    handleRemove={handleRemove}/>
                             )
                         })}
                     </ul>
