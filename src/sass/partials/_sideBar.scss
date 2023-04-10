@@ -35,6 +35,7 @@
 .savedRuns {
     background: rgba(0, 0, 0, 0.69);
     width: 15rem;
+    // min-width:13rem;
     display: flex;
 }
 
@@ -45,7 +46,8 @@
 
 .openMenu {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    margin-top: 4rem;
 }
 .openMenu.active {
     transition: 2s;

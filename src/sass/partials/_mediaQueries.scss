@@ -188,3 +188,12 @@
         line-height: 1rem;
     }
 }
+
+// *************
+// SideBar.js
+// *************
+@media (max-width: 360px) {
+    .savedRuns {
+        width: 13rem;
+    }
+}
