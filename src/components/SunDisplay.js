@@ -14,7 +14,7 @@ const SunDisplay = (props) => {
 
     return(
         <section className="sunDisplay">
-            <button className="star" onClick={props.handleClick}>
+            <button className="heart" onClick={props.handleClick}>
                 <BsIcons.BsStar />
             </button>
             <p>Start your SunRun at:</p>
