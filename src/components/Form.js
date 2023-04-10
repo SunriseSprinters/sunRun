@@ -18,11 +18,9 @@ const Form = (props) => {
         day = '0' + day;
     }
     let month = (today.getMonth() + 1)
-    console.log(month);
     if (month < 10) {
         month = '0' + month;
     }
-    console.log(today);
     const year = today.getFullYear();
     const date = year + '-' + month + '-' + day;
 
@@ -41,7 +39,7 @@ const Form = (props) => {
                     id="date" 
                     required
                     placeholder="yyyy-mm-dd" 
-                    min={today}
+                    min={date}
                     value={props.dateInput}
                     today={today}
                     />
