@@ -1,13 +1,20 @@
+// GLOBAL
 @use './partials/_setup.scss';
 @use './partials/_global.scss';
+
+// TYPOGRAPHY
 @use './partials/_typography.scss';
-@use './partials/_variables.scss' as *;
+
+// COMPONENTS
 @use './partials/_header.scss';
 @use './partials/_home.scss';
 @use './partials/form.scss';
 @use './partials/_sunDisplay.scss';
 @use './partials/_footer.scss';
 @use './partials/_sunInfo.scss';
+@use './partials/_sideBar.scss';
 @use './partials/_savedRuns.scss';
+
+// MEDIA QUERIES
 @use './partials/mediaQueries.scss';
 

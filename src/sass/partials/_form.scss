@@ -79,7 +79,7 @@ button[type="submit"]:hover span:after {
 }
 
 // SUNINFO BUTTON STYLING
-button[type="button"] {
+.submit {
     background: gold;
     cursor: pointer;
     &:hover {

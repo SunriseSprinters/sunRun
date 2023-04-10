@@ -1,0 +1,56 @@
+@use './variables' as *;
+
+// .savedRuns {
+    .sidebar {
+    position: absolute;
+    right: 0;
+    display: flex;
+    color: #fff;
+    top: 0;
+    z-index: 10;
+    height: 100vh;
+    right: -15rem;
+    position: fixed;
+    transition: 1s;
+    a:hover,
+    a:focus {
+        color: $red;
+        transition: 1s;
+    }
+}
+
+.sideButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    font-size: 2rem;
+    p {
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        transform: rotate(180deg);
+    }
+}
+
+.savedRuns {
+    background: rgba(0, 0, 0, 0.69);
+    width: 15rem;
+    display: flex;
+}
+
+.sidebar.active {
+    right: 0;
+    transition: 1s;
+}
+
+.openMenu {
+    display: flex;
+    align-items: center;
+}
+.openMenu.active {
+    transition: 2s;
+}
+
+.userSavedRuns .star {
+    font-size: 1rem;
+}
