@@ -67,9 +67,17 @@
 
 @media (max-width: 950px) {
 
-    .homeTextContainer img {
-        top: 11%;
-        left: 20%;
+    .homeTextContainer {
+        flex-direction: column;
+        margin-bottom: 3rem;
+
+        img {
+            position: static;
+        }
+        
+        h1 {
+            padding: 0;
+        }
     }
 }
 
@@ -77,11 +85,6 @@
 
     .homeTextContainer {
         height: 30vh;
-
-        img {
-            top: 7%;
-            left: 16%;
-        }
     }
 
     .textContainer {
@@ -111,20 +114,41 @@
     .textContainer {
         width: 100%;
         margin-top: 0;
+
+        .pText {
+            display: none;
+        }
+    }
+
+    .sunCircle {
+        display: block;
+    }
+
+    .sunMobile {
+        position: absolute;
+        right: 0;
+        bottom: 1.9rem;
     }
 
     .buttonContainer .arrowDownButton {
+        background-color: white;
         width: 3rem;
+        margin-top: 13rem;
+    }
+}
+
+@media (max-width: 510px) {
+    .buttonContainer .arrowDownButton {
+        width: 2.5rem;
+        margin-top: 10rem;
     }
 }
 
 @media (max-width: 320px) {
-    header {
-        height: 2rem;
-    }
 
     .homeTextContainer {
         height: 23vh;
+        margin-bottom: 3rem;
 
         img {
             height: 5rem;
@@ -138,9 +162,12 @@
         width: 90%;
     }
 
+    .sunMobile {
+        bottom: 3.9rem;
+    }
+
     .buttonContainer .arrowDownButton {
         width: 2rem;
-        margin: 1rem 0;
     }
 }
 
