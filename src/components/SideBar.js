@@ -72,15 +72,14 @@ const SideBar = () => {
     
 
     return (
-        <section className="savedRuns">
+        <section className={sidebar ? 'sidebar active' : 'sidebar'}>
             <div className={openMenu ? "openMenu active" : 'openMenu'}>
-            {/* <SavedRuns /> */}
             <Link to ="#" className="sideButton" onClick={openSidebar}>
                 <p>Saved Runs</p>
-                    {sidebar ? <IoIcons.IoIosArrowForward /> : <IoIcons.IoIosArrowBack /> }
+                    {sidebar ? <IoIcons.IoIosArrowForward className="icon" /> : <IoIcons.IoIosArrowBack className="icon" /> }
             </Link>
             </div>
-            <div className={sidebar ? 'sidebar active' : 'sidebar'}>
+            <div className="savedRuns">
                 <div className="sidebarContainer">
                     <ul className="sidebarItems">
                         {runState.map((userRun) => {

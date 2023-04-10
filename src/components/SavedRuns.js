@@ -1,9 +1,4 @@
 // SavedRuns.js
-import { Link } from 'react-router-dom';
-import { useState } from 'react';
-import app from '../firebase';
-
-// import { getDatabase, onValue, push, remove, ref } from 'firebase/database';
 
 // ASSETS
 import * as BsIcons from 'react-icons/bs'
@@ -13,11 +8,10 @@ const SavedRuns = (props) => {
 
     return (
         <li className="userSavedRuns" id={props.id} >
-            <button type="button" id={props.id} onClick={props.handleRemove} className="star">
-                {/* <BsIcons.BsStarFill /> */}
-                ⭐️
+            <button id={props.id} onClick={props.handleRemove} className="star">
+                ❤️
             </button>
-            <p className='savedDate'>Date: {props.date}</p>
+            <p className='savedDate'><span>Date:</span> {props.date}</p>
             <p className='savedSun'>{props.sunMode}</p>
             <p className='savedTime'>Leave at: {props.time}</p>
         </li>
