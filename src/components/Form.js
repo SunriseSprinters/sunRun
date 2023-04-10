@@ -12,8 +12,19 @@ const Form = (props) => {
         : <><FiSunset className="right"/> Sunset<span className="sr-only">sunset</span></> 
 
     const today = new Date();
+
+    let day = today.getDate()
+    if (day < 10) {
+        day = '0' + day;
+    }
+    let month = (today.getMonth() + 1)
+    console.log(month);
+    if (month < 10) {
+        month = '0' + month;
+    }
     console.log(today);
-    const date = today.getFullYear() + '-' + 0+(today.getMonth()+1) + '-' + 0+today.getDate();
+    const year = today.getFullYear();
+    const date = year + '-' + month + '-' + day;
 
     return (
         <section className="form">

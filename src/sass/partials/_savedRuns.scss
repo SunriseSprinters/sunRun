@@ -1,57 +1,34 @@
 @use './variables' as *;
 
 .savedRuns {
-    position: absolute;
-    right: 0;
     display: flex;
-    justify-content: flex-end;
-    align-content: center;
-    color: #fff;
-    top: 0;
-    z-index: 10;
-
-    a:hover,
-    a:focus {
-        color: $red;
-        transition: 1s;
-    }
-}
-
-.sideButton {
-    display: flex;
-    p {
-        writing-mode: vertical-rl;
-        text-orientation: mixed;
-        transform: rotate(180deg);
-    }
-}
-
-.sidebar {
-    background: rgba(0, 0, 0, 0.69);
-    width: 14rem;
-    right: -100%;
-    position: fixed;
-    transition: 1s;
-    display: flex;
-}
-
-.sidebar.active {
-    right: 0;
-    transition: 1s;
+    justify-content: center;
     overflow: scroll;
-    height: 100%;
+}
+.userSavedRuns {
+    background-color: $orange;
+    margin: .5rem;
+    padding: .5rem;
+    border-radius: 1rem;
+    position: relative;
+    width: 12rem;
+    color: black;
+    text-align: center;
+    .savedDate span{
+        display: block;
+        text-transform: uppercase;
+    }
+    .heart {
+        font-size: 1rem;
+    }
 }
 
-.openMenu.active {
-    transition: 2s;
-    width: 16.2rem;
 
-}
+// LIGHT AND DARK COLOURS
 
-// .openMenu {
-//     transition: 2s;
-// }
-
-.userSavedRuns .star {
-    font-size: 1rem;
+.dark {
+    .userSavedRuns {
+        background-color: $sidebarYellow;
+        color: black;
+    }
 }

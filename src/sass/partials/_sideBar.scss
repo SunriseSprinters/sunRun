@@ -1,0 +1,77 @@
+@use './variables' as *;
+
+.sidebar {
+    position: absolute;
+    right: 0;
+    display: flex;
+    color: #fff;
+    top: 0;
+    z-index: 10;
+    height: 100vh;
+    right: -15rem;
+    position: fixed;
+    transition: 1s;
+    a:hover,
+    a:focus {
+        color: $red;
+        transition: 1s;
+    }
+    .sideButton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 3rem;
+        font-size: 2rem;
+        text-transform: uppercase;
+        p {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            transform: rotate(180deg);
+            padding: .5rem;
+            background: #d9d9d9;
+            border-radius: 1rem;
+            margin-right: .25rem;
+            line-height: .75rem;
+        }
+    }
+    .savedRuns {
+    background: rgba(0, 0, 0, 0.69);
+        width: 15rem;
+        display: flex;
+    }
+    .openMenu {
+        display: flex;
+        align-items: flex-start;
+        margin-top: 4rem;
+    }
+    .openMenu.active {
+        transition: 2s;
+    }
+}
+
+.sidebar.active {
+    right: 0;
+    transition: 1s;
+}
+
+
+// LIGHT AND DARK COLOURS
+.dark {
+    .sidebar a:hover,
+    .sidebar a:focus {
+        // color: rgb(255, 221, 0);
+        color: $sidebarYellow;
+        transition: 1s;
+        }
+
+    .sidebar .sideButton {
+        color: white;
+        p{
+            background: rgba(0, 0, 0);
+
+        }
+    }
+}
+
+
+

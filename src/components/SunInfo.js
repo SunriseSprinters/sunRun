@@ -34,6 +34,7 @@ const SunInfo = () => {
     const [sunriseDate, setSunriseDate] = useState(null);
     const [sunriseTime, setSunriseTime] = useState(null);
     const [errorMessage, setErrorMessage] = useState('')
+    const [runFaved, setRunFaved] = useState(false);
 
     // function used to keep track of the user input on the form
     const handleChange = (e) => {
@@ -52,7 +53,7 @@ const SunInfo = () => {
     const handleClick = (e) => {
         const db = getDatabase(app);
         const dbRef = ref(db); 
-        
+        setRunFaved(!runFaved);
         push(dbRef, {
             date: sunriseRun ? sunriseDate : sunsetDate,
             startTime: sunriseRun ? sunriseTime : sunsetTime,
@@ -116,6 +117,7 @@ const SunInfo = () => {
                 sunsetTime={sunsetTime}
                 sunriseDate={sunriseDate}
                 sunriseTime={sunriseTime}
+                runFaved={runFaved}
                 /> : <h3 className="axiosErrorMessage">{errorMessage}</h3>}
         </div>
     )
