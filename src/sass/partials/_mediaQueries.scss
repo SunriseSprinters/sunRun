@@ -229,7 +229,24 @@
 // SideBar.js
 // *************
 @media (max-width: 360px) {
-    .savedRuns {
-        width: 13rem;
+    .sidebar {
+        right: -13rem;
+        .savedRuns {
+            width: 13rem;
+        }
+    }
+}
+
+// *************
+// Header.js
+// *************
+@media (max-width: 810px) {
+    header {
+        .logo {
+            margin-left: .5rem;
+        }
+        .themeButton {
+            margin-right: .5rem;
+        }
     }
 }

@@ -75,8 +75,9 @@ const SideBar = () => {
         <section className={sidebar ? 'sidebar active' : 'sidebar'}>
             <div className={openMenu ? "openMenu active" : 'openMenu'}>
             <Link to ="#" className="sideButton" onClick={openSidebar}>
-                <p>Saved Runs</p>
-                    {sidebar ? <IoIcons.IoIosArrowForward className="icon" /> : <IoIcons.IoIosArrowBack className="icon" /> }
+                <p>Saved Runs {sidebar ? <IoIcons.IoIosArrowForward className="icon" /> : <IoIcons.IoIosArrowBack className="icon" />}
+                </p>
+                    {/* {sidebar ? <IoIcons.IoIosArrowForward className="icon" /> : <IoIcons.IoIosArrowBack className="icon" /> } */}
             </Link>
             </div>
             <div className="savedRuns">

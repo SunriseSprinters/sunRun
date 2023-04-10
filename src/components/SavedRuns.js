@@ -8,7 +8,7 @@ const SavedRuns = (props) => {
 
     return (
         <li className="userSavedRuns" id={props.id} >
-            <button id={props.id} onClick={props.handleRemove} className="star">
+            <button id={props.id} onClick={props.handleRemove} className="heart">
                 ❤️
             </button>
             <p className='savedDate'><span>Date:</span> {props.date}</p>
