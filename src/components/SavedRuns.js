@@ -1,4 +1,3 @@
-
 const SavedRuns = (props) => {
 
     const {id, handleRemove, date, sunMode, time} = props;
