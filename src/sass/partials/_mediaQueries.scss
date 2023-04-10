@@ -1,57 +1,7 @@
 @use './variables' as *;
 
-// *************
-// SunDisplay.js
-// *************
-@media (max-width: 700px) {
-    .sunDisplay {
-        width: 50%;
-    }
-
-    h2 {
-        font-size: clamp(2rem, 3.5vw, 4rem);
-    }
-}
-
-@media (max-width: 543px) {
-    .sunDisplay {
-        width: 65%;
-    }
-}
-
-@media (max-width: 419px) {
-    .sunDisplay {
-        width: 75%;
-    }
-}
-
-@media (max-width: 363px) {
-    h2 {
-        font-size: clamp(1.7rem, 3.5vw, 4rem);
-    }
-}
-
-// *************
-// Footer.js
-// *************
-@media (max-width: 658px) {
-    footer span {
-        display: block;
-    }
-
-    footer p,
-    footer a {
-        line-height: 1rem;
-    }
-}
-
-// *************
-// Form.js
-// *************
-
-// Landing Page 
+// Home.js
 @media (max-width: 1280px) {
-
     .homeTextContainer {
         height: 35vh;
     }
@@ -66,7 +16,6 @@
 }
 
 @media (max-width: 950px) {
-
     .homeTextContainer {
         flex-direction: column;
         margin-bottom: 3rem;
@@ -82,7 +31,6 @@
 }
 
 @media (max-width: 768px) {
-
     .homeTextContainer {
         height: 30vh;
     }
@@ -103,7 +51,6 @@
 }
 
 @media (max-width: 550px) {
-
     .homeTextContainer {
         img {
             height: 7rem;
@@ -150,7 +97,6 @@
 }
 
 @media (max-width: 320px) {
-
     .homeTextContainer {
         height: 23vh;
         margin-bottom: 3rem;
@@ -180,9 +126,7 @@
     }
 }
 
-// *************
 // SunDisplay.js
-// *************
 @media (max-width: 700px) {
     .sunDisplay {
         width: 50%;
@@ -211,9 +155,32 @@
     }
 }
 
-// *************
+// Form.js
+@media (max-width: 1000px) {
+    .form form {
+        width: 65%;
+    }
+}
+
+@media (max-width: 700px) {
+    .form form {
+        width: 75%;
+    }
+}
+
+@media (max-width: 543px) {
+    .form form {
+        width: 80%;
+    }
+}
+
+@media (max-width: 419px) {
+    .form form {
+        width: 85%;
+    }
+}
+
 // Footer.js
-// *************
 @media (max-width: 658px) {
     footer span {
         display: block;
@@ -225,9 +192,7 @@
     }
 }
 
-// *************
 // SideBar.js
-// *************
 @media (max-width: 360px) {
     .savedRuns {
         width: 13rem;
