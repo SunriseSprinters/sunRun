@@ -48,10 +48,9 @@
 }
 
 // SUBMIT BUTTON STYLING
-
 button[type="submit"] {
     background-color: $orange;
-    color: #FFFFFF;
+    color: black;
     transition: all 0.5s;
     cursor: pointer; 
     text-transform: uppercase;
@@ -79,7 +78,7 @@ button[type="submit"]:hover span:after {
 }
 
 // SUNINFO BUTTON STYLING
-.submit {
+button[type=button] {
     background: gold;
     cursor: pointer;
     &:hover {

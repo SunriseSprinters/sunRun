@@ -9,7 +9,6 @@ const SavedRuns = (props) => {
     return (
         <li className="userSavedRuns" id={props.id} >
             <button id={props.id} onClick={props.handleRemove} className="star">
-                {/* ⭐️ */}
                 ❤️
             </button>
             <p className='savedDate'><span>Date:</span> {props.date}</p>
