@@ -24,6 +24,7 @@
         width: 3rem;
         font-size: 2rem;
         text-transform: uppercase;
+        
         p {
             writing-mode: vertical-rl;
             text-orientation: mixed;
@@ -60,7 +61,6 @@
 .dark {
     .sidebar a:hover,
     .sidebar a:focus {
-        // color: rgb(255, 221, 0);
         color: $sidebarYellow;
         transition: 1s;
         }

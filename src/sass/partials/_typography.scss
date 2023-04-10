@@ -1,6 +1,5 @@
 // typography.scss
 @use './variables' as *;
-// removed html font-size 120% as it is already included in setup at 125% (20px)
 
 body {
     font-family: $baseFont;
