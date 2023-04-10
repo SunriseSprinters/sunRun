@@ -19,7 +19,6 @@ const SavedRuns = (props) => {
             <p className='savedDate'>Date: {props.date}</p>
             <p className='savedSun'>{props.sunMode}</p>
             <p className='savedTime'>Leave at: {props.time}</p>
-
         </li>
     )
 }
