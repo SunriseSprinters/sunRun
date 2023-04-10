@@ -1,7 +1,7 @@
 // SavedRuns.js
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { getDatabase, ref, onValue, push, remove } from 'firebase/database';
+import { getDatabase, ref, onValue, remove } from 'firebase/database';
 
 import app from '../firebase';
 import SavedRuns from './SavedRuns';
@@ -16,7 +16,6 @@ const SideBar = () => {
     // Variable that references our db:
     const dbRef = ref(database);
 
-    const [keyArray, setKeyArray] = useState([]);
     const [runState, setRunState] = useState([]);
     const [sidebar, setSidebar] = useState(false);
     const [openMenu, setOpenMenu] = useState(false);
@@ -25,13 +24,10 @@ const SideBar = () => {
         setSidebar(!sidebar);
     }
 
-    
     useEffect(() => {
         // Event listener that will fire from the db and call the data 'response'
         onValue(dbRef, (response) => {
 
-            let idArray = [];
-            // Variable to store the new state we're creating
             const arrayOfRuns = []
             // Save our response in a variable
             const dataResponse = response.val();
@@ -45,36 +41,27 @@ const SideBar = () => {
                     sunMode: dataResponse[key].sunset
                 }
 
-                idArray.push(userRun);
-
                 // Push each saved run object to an array we created in arrayOfRuns
                 arrayOfRuns.push(userRun)
             }
-            setKeyArray(idArray);
-            // console.log(arrayOfRuns);
             setRunState(arrayOfRuns);
-            // console.log(runState);
         })
     }, [])
 
+    // function expression that calls the removeUser function that targets the id through the event object
     const handleRemove = (e) => {
-        console.log(keyArray);
-        console.log(e.target.id);
-        // const userRef = e.target.id
-
         removeUser(e.target.id);
     }
 
+    // function expression that utilize the remove function imported from firebase
     const removeUser = (id) => {
         const userRef = ref(database, `/${id}`)
         remove(userRef);
     }
     
-
     return (
         <section className="savedRuns">
             <div className={openMenu ? "openMenu active" : 'openMenu'}>
-            {/* <SavedRuns /> */}
             <Link to ="#" className="sideButton" onClick={openSidebar}>
                 <p>Saved Runs</p>
                     {sidebar ? <IoIcons.IoIosArrowForward /> : <IoIcons.IoIosArrowBack /> }

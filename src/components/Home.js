@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { AiOutlineArrowDown, AiOutlineExpandAlt, AiOutlineClose } from 'react-icons/ai';
+import { AiOutlineArrowDown } from 'react-icons/ai';
 import 'animate.css'
 import sunsetIcon from "../assets/sunset.png"
 

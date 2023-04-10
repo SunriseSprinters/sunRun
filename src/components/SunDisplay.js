@@ -6,7 +6,7 @@ const SunDisplay = (props) => {
 
     console.log('display', props)
 
-    const {sunriseRun, sunData, sunsetDate, sunsetTime, sunriseDate, sunriseTime} = props;
+    const {sunriseRun, sunsetDate, sunsetTime, sunriseDate, sunriseTime} = props;
 
     const departureDate = sunriseRun ? sunriseDate : sunsetDate
 
