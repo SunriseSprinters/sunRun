@@ -24,14 +24,14 @@ const Home = () => {
 
                     <div className="sunCircle">
                         <img src={sun} alt="background sun" className="sunMobile" />
-                    </div>
 
-                    <div className="buttonContainer">
-                        <Link to={`/sunApp`}>
-                            <button className="arrowDownButton"><AiOutlineArrowDown />
-                                <span className="sr-only">Click here to start planning your runs</span>
-                            </button>
-                        </Link>
+                        <div className="buttonContainer">
+                            <Link to={`/sunApp`}>
+                                <button className="arrowDownButton"><AiOutlineArrowDown />
+                                    <span className="sr-only">Click here to start planning your runs</span>
+                                </button>
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </section>
