@@ -15,11 +15,20 @@ import { ref, getDatabase, push } from 'firebase/database';
 const SunInfo = () => {
     // initializing state to keep track of the data we retrieve on the axios call on the sunrise-sunset api
     const [sunData, setSunData] = useState();
-    // initializing state to keep track on the date input that the user wants to check
+
+    // initializing state to keep track on the date input that the user wants to check.
     const [dateInput, setDateInput] = useState('');
+
+    // initializing state to keep track if the user choose's to run on sunset or sunrise using a boolean value
     const [sunriseRun, setSunriseRun] = useState(true);
+
+    // initializing state to keep track when the data returns from the API call
     const [dataReady, setDataReady] = useState();
+
+    // initializing state to keep track on the user's run duration time
     const [runDuration, setRunDuration] = useState('');
+
+    // initializing state to keep track of the date and time on each sunset and sunrise to use it on the display and push it on to firebase if the user chooses to
     const [sunsetDate, setSunsetDate] = useState(null);
     const [sunsetTime, setSunsetTime] = useState(null);
     const [sunriseDate, setSunriseDate] = useState(null);
@@ -27,11 +36,9 @@ const SunInfo = () => {
     const [errorMessage, setErrorMessage] = useState('')
     const [runFaved, setRunFaved] = useState(false);
 
-
     // function used to keep track of the user input on the form
     const handleChange = (e) => {
         setDateInput(e.target.value);
-        console.log(e.target.value)
     }
 
     const handleToggle = () => {
@@ -74,7 +81,6 @@ const SunInfo = () => {
             setDataReady(true);
             setRunDuration('');
             // declared variable to store the object we need in order to use the react-moment library to handle time manipulation and format change in order to display the departure time 
-            // console.log(apiData.data)
             const sunsetObj = moment(apiData.data.results.sunset);
             const sunriseObj = moment(apiData.data.results.sunrise);
             setSunsetDate(sunsetObj.format('ll'));
@@ -84,13 +90,11 @@ const SunInfo = () => {
             })
             .catch(function (error) {
                 setErrorMessage(error.toJSON().message);
-                console.log(error.toJSON());
             });
-            console.log(sunsetDate);
     }
 
     return (
-        // passing the handleChange and handleSubmit functions as props so that the <Form /> component have access to it
+        // passing the handleChange and handleSubmit functions, and other attributes to use as props so that the <Form /> component have access to it
         <div className="sunInfoPage">
             <SideBar />
             <Form 
@@ -103,7 +107,9 @@ const SunInfo = () => {
                 dateInput={dateInput}
             />
 
-            {errorMessage.length < 1 ? dataReady && <SunDisplay 
+            {errorMessage.length < 1 ? dataReady && 
+            // passing the handleClick and other attributes  to use as props so that the <SunDisplay /> component have access to it
+            <SunDisplay 
                 handleClick={handleClick}
                 sunriseRun={sunriseRun} 
                 sunData={sunData} 

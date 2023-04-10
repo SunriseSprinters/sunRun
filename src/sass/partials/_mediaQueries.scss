@@ -30,6 +30,17 @@
     }
 }
 
+@media (max-width: 810px) {
+    header {
+        .logo {
+            margin-left: .5rem;
+        }
+        .themeButton {
+            margin-right: .5rem;
+        }
+    }
+}
+
 @media (max-width: 768px) {
     .homeTextContainer {
         height: 30vh;
@@ -194,7 +205,10 @@
 
 // SideBar.js
 @media (max-width: 360px) {
-    .savedRuns {
-        width: 13rem;
+    .sidebar {
+        right: -13rem;
+        .savedRuns {
+            width: 13rem;
+        }
     }
 }

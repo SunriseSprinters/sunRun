@@ -61,6 +61,7 @@ button[type="submit"] {
     cursor: pointer; 
     text-transform: uppercase;
     border: none;
+    min-width: 8rem;
 
     span {
         cursor: pointer;
@@ -103,12 +104,10 @@ label {
 }
 
 // LIGHT AND DARK COLOURS
-
 .dark {
     .form form {
     background: $white;
-    }
-
+}
     button[type="submit"] {
         background-color: $blue;
         color: #FFFFFF;
