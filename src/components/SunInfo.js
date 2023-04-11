@@ -82,6 +82,8 @@ const SunInfo = () => {
             setSunData(apiData.data);
             setDataReady(true);
             setRunDuration('');
+            setRunFaved(false);
+            setDisabled(false);
             // declared variable to store the object we need in order to use the react-moment library to handle time manipulation and format change in order to display the departure time 
             const sunsetObj = moment(apiData.data.results.sunset);
             const sunriseObj = moment(apiData.data.results.sunrise);

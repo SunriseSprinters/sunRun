@@ -27,7 +27,7 @@ const Form = (props) => {
     return (
         <section className="form">
             <form onSubmit={handleSubmit} action="">
-                <Link to="/" className="homepage"><AiOutlineArrowLeft/></Link>
+                <Link to="/" className="homepage"><AiOutlineArrowLeft alt='left arrow' /><span className="sr-only">back arrow to home page</span></Link>
                 <label 
                     htmlFor="date" >
                         date
