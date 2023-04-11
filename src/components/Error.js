@@ -1,4 +1,4 @@
-
+// Error component for non-defined routes
 const Error = () => {
     return (
         <div className="urlErrorMessage">

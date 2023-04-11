@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { FiSunrise } from 'react-icons/fi';
 import { FiSunset } from 'react-icons/fi';
 import { AiOutlineArrowLeft } from 'react-icons/ai';
@@ -18,7 +17,17 @@ const Form = (props) => {
         : <><FiSunset className="right"/> Sunset<span className="sr-only">sunset</span></> 
 
     const today = new Date();
-    const date = today.getFullYear() + '-' + 0+(today.getMonth()+1) + '-' + 0+today.getDate();
+    // added conditionals to set date format to prevent user from selecting a day from the past
+    let day = today.getDate()
+    if (day < 10) {
+        day = '0' + day;
+    }
+    let month = (today.getMonth() + 1)
+    if (month < 10) {
+        month = '0' + month;
+    }
+    const year = today.getFullYear();
+    const date = year + '-' + month + '-' + day;
 
     return (
         <section className="form">
@@ -37,13 +46,13 @@ const Form = (props) => {
                     placeholder="yyyy-mm-dd" 
                     min={date}
                     value={props.dateInput}
+                    today={today}
                     />
                 <label htmlFor="runTime" >Run at</label><button type="button" onClick={handleToggle}>{toggleDisplay}</button>
                 {sunriseRun === false && 
                     <>
                         <label htmlFor="runTime" >Length of run</label>
                         <input
-                            
                             name="runTime"
                             onChange={sunsetRun}
                             type="number" 
@@ -53,7 +62,8 @@ const Form = (props) => {
                             min="1">
                         </input>
                     </>}
-                <button type="submit" className="submit">Let's Run<span></span></button> 
+                <button type="submit" className="submit">Let's Run<span></span>
+                </button> 
             </form>
         </section>
     )

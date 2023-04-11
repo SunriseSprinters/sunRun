@@ -3,13 +3,7 @@ import * as AiIcons from 'react-icons/ai'
 
 const SunDisplay = (props) => {
 
-    console.log('display', props)
-
-
-    
-
-
-    const {sunriseRun, sunData, sunsetDate, sunsetTime, sunriseDate, sunriseTime, runFaved} = props;
+    const {sunriseRun, sunsetDate, sunsetTime, sunriseDate, sunriseTime, runFaved, disabled} = props;
 
     const departureDate = sunriseRun ? sunriseDate : sunsetDate
 
@@ -19,7 +13,7 @@ const SunDisplay = (props) => {
 
     return(
         <section className="sunDisplay">
-            <button className="star" onClick={props.handleClick}>
+            <button disabled={disabled} className="heart" onClick={props.handleClick}>
                 {favIcon}
             </button>
             <p>Start your SunRun at:</p>
