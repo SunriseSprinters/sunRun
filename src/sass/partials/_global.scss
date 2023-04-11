@@ -8,15 +8,15 @@
 
 .App {
     height: 100vh;
+    .light {
+        background-color: $background;
+    }
+    
+    .dark {
+        background-color: $blue;
+    }
 }
 
-.light {
-    background-color: $background;
-}
-
-.dark {
-    background-color: $blue;
-}
 
 .wrapper {
     max-width: 1440px;
