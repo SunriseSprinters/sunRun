@@ -1,0 +1,74 @@
+@use './variables' as *;
+
+.homeTextContainer {
+    height: 40vh;
+    padding-top: 3rem;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+
+    img {
+        height: 8rem;
+        width: 8rem;
+        position: absolute;
+        top: 12%;
+        left: 23%;
+    }
+
+    h1 {
+        padding: 3rem 0 0 3rem;
+    }
+}
+
+.textContainer{
+    width: 80%;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: $yellow;
+    opacity: 70%;
+
+    h2 {
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+
+    p {
+        text-align: center;
+    }
+} 
+
+.sunMobile {
+    display: none;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+
+    .arrowDownButton {
+        width: 4rem;
+        padding-top: 0.5rem;
+        background: $yellow;
+        opacity: 70%;
+        border-radius: 50%;
+        border: none;
+        text-align: center;
+        cursor: pointer;
+        transition: 0.3s ease, color 0.3s ease;
+    }
+
+    button:hover, 
+    button:focus {
+        background: $orange;
+    }
+}
+
+.dark {
+    .textContainer{
+        background: $white;
+    }
+
+    .arrowDownButton {
+        background: $white;
+    }
+}

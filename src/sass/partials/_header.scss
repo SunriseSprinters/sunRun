@@ -1,0 +1,39 @@
+// header.scss
+@use './variables' as *;
+
+header {
+    position: relative;
+    background: $orange;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .logo {
+        margin-left: 2.5rem;
+        width: 3.5rem;
+        background-image: url('/assets/Logo.png');
+        height: 3.5rem;
+        background-size: contain;
+        background-position: center;
+    }
+
+    .themeButton {
+        margin-right: 2.5rem;
+        width: 3rem;
+        border-style: none;
+        background-color: rgba( 0, 0, 0, 0);
+        cursor: pointer;
+    }
+}
+
+.dark header {
+    background: $blue;
+
+    button {
+        color: $white;
+    }
+}
+
+.dark .logo {
+    background-image: url('/assets/sunLogo.png');
+}

@@ -1,0 +1,34 @@
+@use './variables' as *;
+
+.savedRuns {
+    display: flex;
+    justify-content: center;
+    overflow: scroll;
+}
+.userSavedRuns {
+    background-color: $orange;
+    margin: .5rem;
+    padding: .5rem;
+    border-radius: 1rem;
+    position: relative;
+    width: 12rem;
+    color: black;
+    text-align: center;
+
+    .savedDate span {
+        display: block;
+        text-transform: uppercase;
+    }
+    .heart {
+        font-size: 1rem;
+    }
+}
+
+
+// LIGHT AND DARK COLOURS
+.dark {
+    .userSavedRuns {
+        background-color: $sidebarYellow;
+        color: black;
+    }
+}

@@ -1,0 +1,210 @@
+@use './variables' as *;
+
+// Home.js
+@media (max-width: 1280px) {
+    .homeTextContainer {
+        height: 35vh;
+    }
+
+    .textContainer {
+        width: 85%;
+    }
+    
+    .arrowDownButton {
+        margin: 1rem 0 2rem 0;
+    }
+}
+
+@media (max-width: 950px) {
+    .homeTextContainer {
+        flex-direction: column;
+        margin-bottom: 3rem;
+
+        img {
+            position: static;
+        }
+        
+        h1 {
+            padding: 0;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .homeTextContainer {
+        height: 30vh;
+    }
+
+    .textContainer {
+        width: 90%;
+        margin-top: 1rem;
+        padding: 0.5rem;
+    }
+
+    .instructions {
+        width: 65%;
+    }
+
+    .buttonContainer .arrowDownButton {
+        width: 3rem;
+    }
+}
+
+@media (max-width: 550px) {
+    .homeTextContainer {
+        img {
+            height: 7rem;
+            width: 7rem;
+        }
+    }
+
+    .textContainer {
+        width: 100%;
+        margin-top: 0;
+
+        .pText {
+            display: none;
+        }
+    }
+
+    .sunMobile {
+        display: block;
+    }
+
+    .sunCircle {
+        position: relative;
+        display: flex;
+        justify-content: center;
+
+        .buttonContainer {
+            position: absolute;
+            bottom: 1.5rem;
+        }
+
+        .buttonContainer .arrowDownButton {
+            width: 2.5rem;
+            margin: 0;
+        }
+    }
+
+    .buttonContainer {
+
+        .arrowDownButton {
+            background-color: white;
+        }
+    }
+}
+
+@media (max-width: 510px) {
+        .sunCircle {
+            .buttonContainer {
+                bottom: 2.5rem;
+            }
+        }
+}
+
+@media (max-width: 319px) {
+    .homeTextContainer {
+        height: 23vh;
+        margin-bottom: 3rem;
+
+        img {
+            height: 5rem;
+            width: 5rem;
+            top: 9%;
+            left: 12%;
+        }
+    }
+
+    .instructions {
+        width: 90%;
+    }
+
+    .sunMobile {
+        bottom: 3.9rem;
+    }
+
+    .buttonContainer {
+        margin-top: 13rem;
+    }
+
+    .buttonContainer .arrowDownButton {
+        width: 2rem;
+    }
+}
+
+// SunDisplay.js
+@media (max-width: 700px) {
+    .sunDisplay {
+        width: 50%;
+    }
+
+    h2 {
+        font-size: clamp(2rem, 3.5vw, 4rem);
+    }
+}
+
+@media (max-width: 543px) {
+    .sunDisplay {
+        width: 65%;
+    }
+}
+
+@media (max-width: 419px) {
+    .sunDisplay {
+        width: 75%;
+    }
+}
+
+@media (max-width: 363px) {
+    h2 {
+        font-size: clamp(1.7rem, 3.5vw, 4rem);
+    }
+}
+
+// Form.js
+@media (max-width: 1000px) {
+    .form form {
+        width: 65%;
+    }
+}
+
+@media (max-width: 700px) {
+    .form form {
+        width: 75%;
+    }
+}
+
+@media (max-width: 543px) {
+    .form form {
+        width: 80%;
+    }
+}
+
+@media (max-width: 419px) {
+    .form form {
+        width: 85%;
+    }
+}
+
+// Footer.js
+@media (max-width: 658px) {
+    footer span {
+        display: block;
+    }
+
+    footer p,
+    footer a {
+        line-height: 1rem;
+    }
+}
+
+// SideBar.js
+@media (max-width: 360px) {
+    .sidebar {
+        right: -13rem;
+        .savedRuns {
+            width: 13rem;
+        }
+    }
+}

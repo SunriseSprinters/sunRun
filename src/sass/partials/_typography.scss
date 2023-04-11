@@ -1,0 +1,58 @@
+// typography.scss
+@use './variables' as *;
+
+body {
+    font-family: $baseFont;
+}
+
+h1, 
+h2, 
+h3, 
+h4 {
+    font-family: $headerFont;
+    letter-spacing: 0.05rem;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: $headerTitle;
+    font-size: clamp(3rem, 10vw, 8rem);
+}
+
+h2 {
+    font-size: clamp(1rem, 5vw, 3.5rem);
+}
+
+p,
+a,
+li {
+    font-family: $baseFont;
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
+    line-height: 1.5rem;
+    letter-spacing: 0.05rem;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    color: $background;
+}
+
+.arrowDownButton {
+    font-size: clamp(1rem, 6vw, 3rem);
+}
+
+footer p,
+a
+    {
+    font-size: clamp(0.8rem, 2vw, 1rem);
+}

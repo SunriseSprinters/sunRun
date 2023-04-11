@@ -1,0 +1,20 @@
+@use './variables' as *;
+
+.sunDisplay {
+    margin: 0 auto;
+    background: $yellow;
+    min-width: 15rem;
+    width: 40%;
+    text-align: center;
+    padding: 1rem .5rem;
+    position: relative;
+    
+    span {
+        display: inline-block;
+    }
+}
+
+.dark .sunDisplay{
+    background: $white;
+}
+

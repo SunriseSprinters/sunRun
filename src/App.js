@@ -1,40 +1,43 @@
-import './App.css';
-import { useState, useEffect } from 'react'
-import axios from 'axios';
-import { toHaveDisplayValue } from '@testing-library/jest-dom/dist/matchers';
+import './sass/App.scss';
+import 'animate.css';
+import { useState } from 'react';
+
+// COMPONENTS
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Home from './components/Home';
+import SunInfo from './components/SunInfo';
+import Error from './components/Error';
+import SavedRuns from './components/SavedRuns';
 
 
+import { Route, Routes } from 'react-router-dom';
+
+
+// App.js hold the routes of SunRun. The <Home /> component will be our default home page and <SunInfo /> will be our main app component where the <Form /> and <Display /> component will live
 
 function App() {
 
-  const [sunData, setSunData] = useState();
-
-  useEffect(() => {
-    axios({
-        url: "https://api.sunrise-sunset.org/json",
-        params: {
-          // Googled for Toronto's long and lat 
-            lat: 43.651070,
-            lng: -79.347015,
-            date: "2022-04-22",
-        }
-        
-    })
-        .then( (apiData) => {
-
-        setSunData(apiData.data);
-        })
-
-    }, []);
-
-  console.log(sunData)
-
+  // Declared state to track which theme the page is currently displaying, set to light on page load.
+  const [pageTheme, setPageTheme] = useState('light');
+  // declared toggle function to flip theme from light to dark. Need to pass as prop to header
+  const toggleTheme = () => {
+    if (pageTheme === 'light') {
+      setPageTheme('dark')
+    } else {
+      setPageTheme('light')
+    }
+  }
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Sun Run is the best!!!!!</h1>
-      </header>
+    <div className={`App ${pageTheme}`}>
+      <Header toggleTheme={toggleTheme} pageTheme={pageTheme}/>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/sunApp' element={<SunInfo />} />
+        <Route path='/*' element={<Error />} />
+      </Routes>
+      <Footer />
     </div>
   );
 }

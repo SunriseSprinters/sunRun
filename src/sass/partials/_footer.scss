@@ -1,0 +1,39 @@
+// footer.scss
+@use './variables' as *;
+
+footer {
+    background: $orange;
+    position: fixed;
+    bottom: 0;
+
+    width: 100vw;
+    
+    p {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    p,
+    a {
+        text-align: center;
+    }
+}
+
+.light footer {
+    background: $orange;
+
+    p, 
+    a {
+        color: black;
+    }
+}
+
+.dark footer {
+    background: $blue;
+
+    p, 
+    a {
+        color: white
+    }
+}
