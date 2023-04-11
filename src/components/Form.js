@@ -8,6 +8,11 @@ const Form = (props) => {
     // de-structuring the props and using the passed down functions for onSubmit and onChange events.
     const {handleChange, handleSubmit, handleToggle, sunriseRun, sunsetRun} = props;
 
+    const chosenMonth = today.getMonth()+1
+    if (chosenMonth < 10) {
+        chosenMonth = 0+(today.getMonth()+1)
+    } 
+
     const toggleDisplay = sunriseRun 
         ? <><FiSunrise className="left"/> Sunrise<span className="sr-only">sunrise</span></>
         : <><FiSunset className="right"/> Sunset<span className="sr-only">sunset</span></> 
