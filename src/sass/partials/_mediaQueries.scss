@@ -30,17 +30,6 @@
     }
 }
 
-@media (max-width: 810px) {
-    header {
-        .logo {
-            margin-left: .5rem;
-        }
-        .themeButton {
-            margin-right: .5rem;
-        }
-    }
-}
-
 @media (max-width: 768px) {
     .homeTextContainer {
         height: 30vh;
@@ -82,14 +71,23 @@
         display: block;
     }
 
-    .sunMobile {
-        position: absolute;
-        right: 0;
-        bottom: 1.9rem;
+    .sunCircle {
+        position: relative;
+        display: flex;
+        justify-content: center;
+
+        .buttonContainer {
+            position: absolute;
+            bottom: 1.5rem;
+        }
+
+        .buttonContainer .arrowDownButton {
+            width: 2.5rem;
+            margin: 0;
+        }
     }
 
     .buttonContainer {
-        margin-top: 11rem;
 
         .arrowDownButton {
             background-color: white;
@@ -98,16 +96,14 @@
 }
 
 @media (max-width: 510px) {
-    .buttonContainer {
-        margin-top: 10rem;
-    }
-    .buttonContainer .arrowDownButton {
-        width: 2.5rem;
-        margin: 0;
-    }
+        .sunCircle {
+            .buttonContainer {
+                bottom: 2.5rem;
+            }
+        }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 319px) {
     .homeTextContainer {
         height: 23vh;
         margin-bottom: 3rem;

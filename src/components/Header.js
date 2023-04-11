@@ -16,9 +16,7 @@ const themeToggleIcon = pageTheme === 'light'
                     <span className="sr-only">Logo and navigation to home.</span>
                 </figure>
             </Link>
-            <button onClick={toggleTheme} className="themeButton">
-            {themeToggleIcon}
-            </button>
+            <button onClick={toggleTheme} className="themeButton"><span className="sr-only">Light and dark mode toggle button</span>{themeToggleIcon}</button>
         </header>
     )
 }

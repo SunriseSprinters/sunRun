@@ -12,7 +12,7 @@ const Form = (props) => {
         : <><FiSunset className="right"/> Sunset<span className="sr-only">sunset</span></> 
 
     const today = new Date();
-
+    // added conditionals to set date format to prevent user from selecting a day from the past
     let day = today.getDate()
     if (day < 10) {
         day = '0' + day;
