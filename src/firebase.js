@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    // apiKey: process.env.FIRE_BASE_API_KEY,
-    // authDomain: "sunrun-e6a97.firebaseapp.com",
-    // projectId: "sunrun-e6a97",
-    // storageBucket: "sunrun-e6a97.appspot.com",
-    // messagingSenderId: "880016340492",
-    // appId: "1:880016340492:web:4eee41662d5a35575d6029"
+    apiKey:"AIzaSyBF2spULKMZsmkSGxNfGRectm4aav-R3N8",
+    authDomain: "sunrun-e6a97.firebaseapp.com",
+    projectId: "sunrun-e6a97",
+    storageBucket: "sunrun-e6a97.appspot.com",
+    messagingSenderId: "880016340492",
+    appId: "1:880016340492:web:4eee41662d5a35575d6029"
 };
 
 // Initialize Firebase
