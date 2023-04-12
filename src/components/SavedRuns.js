@@ -1,7 +1,6 @@
 const SavedRuns = (props) => {
 
     const {id, handleRemove, date, sunMode, time, initials} = props;
-    console.log(initials);
     return (
         <li className="userSavedRuns" id={id} >
             <button id={id} onClick={handleRemove} className="heart">

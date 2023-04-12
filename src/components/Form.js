@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const Form = (props) => {
     // de-structuring the props and using the passed down functions for onSubmit and onChange events.
-    const {handleChange, handleSubmit, handleToggle, sunriseRun, sunsetRun, handleInitials, initialsInput} = props;
+    const {handleChange, handleSubmit, handleToggle, sunriseRun, sunsetRun, handleInitials, initialsInput, dateInput, typedValue} = props;
 
     const toggleDisplay = sunriseRun 
         ? <><FiSunrise className="left"/> Sunrise<span className="sr-only">sunrise</span></>
@@ -39,7 +39,6 @@ const Form = (props) => {
                 onChange={handleInitials}
                 value={initialsInput}
                 placeholder='Initials'
-                minlength='2'
                 maxLength='3'
                 required />
                 <label 
@@ -54,7 +53,7 @@ const Form = (props) => {
                     required
                     placeholder="yyyy-mm-dd" 
                     min={date}
-                    value={props.dateInput}
+                    value={dateInput}
                     today={today}
                     />
                 <label htmlFor="runTime" >Run at</label><button type="button" onClick={handleToggle}>{toggleDisplay}</button>
@@ -67,7 +66,7 @@ const Form = (props) => {
                             type="number" 
                             placeholder="run time (min)"
                             required
-                            value={props.typedValue}
+                            value={typedValue}
                             min="1">
                         </input>
                     </>}
