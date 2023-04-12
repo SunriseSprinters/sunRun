@@ -9,13 +9,11 @@ footer {
     width: 100vw;
     
     p {
-        display: flex;
         flex-wrap: wrap;
         justify-content: center;
     }
 
     p,
-
     a {
         text-align: center;
     }
@@ -23,14 +21,18 @@ footer {
 
 .light footer {
     background: $orange;
-    p, a{
+
+    p, 
+    a {
         color: black;
     }
 }
 
 .dark footer {
     background: $blue;
-    p, a{
+
+    p, 
+    a {
         color: white
     }
 }

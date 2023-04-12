@@ -11,6 +11,7 @@
     right: -15rem;
     position: fixed;
     transition: 1s;
+
     a:hover,
     a:focus {
         color: $red;
@@ -23,6 +24,7 @@
         width: 3rem;
         font-size: 2rem;
         text-transform: uppercase;
+        
         p {
             writing-mode: vertical-rl;
             text-orientation: mixed;

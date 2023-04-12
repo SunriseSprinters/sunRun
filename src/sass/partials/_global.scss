@@ -6,17 +6,14 @@
     padding: 0;
 }
 
-.App {
-    height: 100vh;
-    .light {
-        background-color: $background;
-    }
-    
-    .dark {
-        background-color: $blue;
-    }
+//BACKGROUND LOGIC
+body.light {
+    background: $background;
 }
 
+body.dark {
+    background: $blue;
+}
 
 .wrapper {
     max-width: 1440px;
@@ -36,10 +33,6 @@ img {
 ul {
     padding-left: 0;
 }
-
-// body {
-//     height: 100vh;
-// }
 
 .heart {
     border: none;
