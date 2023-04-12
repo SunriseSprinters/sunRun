@@ -44,10 +44,6 @@
     .instructions {
         width: 65%;
     }
-
-    .buttonContainer .arrowDownButton {
-        width: 3rem;
-    }
 }
 
 @media (max-width: 550px) {
@@ -69,6 +65,7 @@
 
     .sunMobile {
         display: block;
+        padding-top: 2.1rem;
     }
 
     .sunCircle {
@@ -79,11 +76,6 @@
         .buttonContainer {
             position: absolute;
             bottom: 1.5rem;
-        }
-
-        .buttonContainer .arrowDownButton {
-            width: 2.5rem;
-            margin: 0;
         }
     }
 
@@ -97,6 +89,7 @@
 
 @media (max-width: 510px) {
         .sunCircle {
+            padding-top: 0;
             .buttonContainer {
                 bottom: 2.5rem;
             }
