@@ -5,7 +5,6 @@ footer {
     background: $orange;
     position: fixed;
     bottom: 0;
-
     width: 100vw;
     
     p {
@@ -17,7 +16,6 @@ footer {
     a {
         text-align: center;
     }
-
 }
 
 .light footer {
@@ -31,9 +29,9 @@ footer {
 
 .dark footer {
     background: $blue;
-
+    
     p, 
-    a {
+    a{
         color: white
     }
 }

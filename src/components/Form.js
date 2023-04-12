@@ -27,7 +27,7 @@ const Form = (props) => {
     return (
         <section className="form">
             <form onSubmit={handleSubmit} action="">
-                <Link to="/" className="homepage"><AiOutlineArrowLeft/></Link>
+                <Link to="/" className="homepage"><AiOutlineArrowLeft alt="Back to Home" /></Link>
                 <label 
                     htmlFor="date" >
                         date
@@ -57,7 +57,7 @@ const Form = (props) => {
                             min="1">
                         </input>
                     </>}
-                <button type="submit" className="submit">Let's Run<span></span>
+                <button type="submit" className="submit" aria-label="Submit running information">Let's Run<span></span>
                 </button> 
             </form>
         </section>
