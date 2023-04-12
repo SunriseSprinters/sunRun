@@ -36,10 +36,17 @@ const SunInfo = () => {
     const [errorMessage, setErrorMessage] = useState('')
     const [runFaved, setRunFaved] = useState(false);
     const [disabled, setDisabled] = useState(false);
+    const [userInitials, setUserInitials] = useState('');
+    const  [initialsInput, setInitialsInput] = useState('');
 
     // function used to keep track of the user input on the form
     const handleChange = (e) => {
         setDateInput(e.target.value);
+    }
+
+    const handleInitials = (e) => {
+        setUserInitials(e.target.value);
+        setInitialsInput(e.target.value);
     }
 
     const handleToggle = () => {
@@ -59,7 +66,7 @@ const SunInfo = () => {
         push(dbRef, {
             date: sunriseRun ? sunriseDate : sunsetDate,
             startTime: sunriseRun ? sunriseTime : sunsetTime,
-            sunset: sunriseRun ? "Sunrise" : "Sunset"
+            sunset: sunriseRun ? "Sunrise" : "Sunset",initials: userInitials.toUpperCase()
         })
     }
 
@@ -84,6 +91,8 @@ const SunInfo = () => {
             setRunDuration('');
             setRunFaved(false);
             setDisabled(false);
+            setInitialsInput('');
+            setDateInput('');
             // declared variable to store the object we need in order to use the react-moment library to handle time manipulation and format change in order to display the departure time 
             const sunsetObj = moment(apiData.data.results.sunset);
             const sunriseObj = moment(apiData.data.results.sunrise);
@@ -102,6 +111,7 @@ const SunInfo = () => {
         <div className="sunInfoPage">
             <SideBar />
             <Form 
+                handleInitials={handleInitials}
                 handleChange={handleChange} 
                 handleSubmit={handleSubmit} 
                 sunriseRun={sunriseRun} 
@@ -109,6 +119,7 @@ const SunInfo = () => {
                 sunsetRun={sunsetRun}
                 typedValue={runDuration}
                 dateInput={dateInput}
+                initialsInput={initialsInput}
             />
 
             {errorMessage.length < 1 ? dataReady && 

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const Form = (props) => {
     // de-structuring the props and using the passed down functions for onSubmit and onChange events.
-    const {handleChange, handleSubmit, handleToggle, sunriseRun, sunsetRun} = props;
+    const {handleChange, handleSubmit, handleToggle, sunriseRun, sunsetRun, handleInitials, initialsInput} = props;
 
     const toggleDisplay = sunriseRun 
         ? <><FiSunrise className="left"/> Sunrise<span className="sr-only">sunrise</span></>
@@ -28,6 +28,20 @@ const Form = (props) => {
         <section className="form">
             <form onSubmit={handleSubmit} action="">
                 <Link to="/" className="homepage"><AiOutlineArrowLeft alt='left arrow' /><span className="sr-only">back arrow to home page</span></Link>
+                <label htmlFor="initials">
+                    Add your Initials
+                </label>
+                <input 
+                type="text" 
+                id="initials" 
+                name="initials"
+                className='initials'
+                onChange={handleInitials}
+                value={initialsInput}
+                placeholder='Initials'
+                minlength='2'
+                maxLength='3'
+                required />
                 <label 
                     htmlFor="date" >
                         date
