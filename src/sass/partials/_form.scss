@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-content: center;
-    padding-top: 10vh;
+    padding-top: 1rem;
     margin-bottom: 3%;
     flex-shrink: 0.5;
 
@@ -14,18 +14,11 @@
         background: $yellow;
         padding: 3%;
         width: 55%;
+        border: 1px solid $orange;
+        border-radius: 1.5rem;
         align-content: center;
         position: relative;
         flex-shrink: 0.5;
-
-        .homepage {
-            font-size: 1.5rem;
-            position: absolute;
-            left: 0;
-            top: 0;
-            text-align: left;
-            width: 2rem;
-        }
 
         input,
         a,
@@ -107,6 +100,7 @@ label {
 .dark {
     .form form {
     background: $white;
+    border: 3px solid white;
 }
     button[type="submit"] {
         background-color: $blue;

@@ -1,0 +1,40 @@
+@use './variables.scss' as *;
+
+.instructionsFlex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.instructionsContainer {
+    position: relative;
+    margin-top: 2rem;
+    padding: 3%;
+    width: 65%;
+    background: $yellow;
+    border: 1px solid $orange;
+    border-radius: 1.5rem;
+    
+    h3 {
+        color: $red;
+        text-align: center;
+        padding-bottom: 0.75rem;
+    }
+
+    .instructionsList {
+        padding: 0 2rem;
+
+        li {
+            padding-left: 0.75rem;
+        }
+    }
+
+    .homepage {
+        font-size: clamp(1rem, 2vw, 1.5rem);
+        position: absolute;
+        left: 1.5rem;
+        top: 1.9rem;
+        text-align: left;
+        width: 2.5rem;
+    }
+}
