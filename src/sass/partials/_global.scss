@@ -6,21 +6,13 @@
     padding: 0;
 }
 
-.App {
-    height: 100vh;
-}
-
-body {
+//BACKGROUND LOGIC
+body.light {
     background: $background;
 }
 
-.dark {
-    background-color: $blue;
-}
-.dark .homePage,
-.dark .sunInfoPage {
-    background-color: $blue;
-    height: 100%;
+body.dark {
+    background: $blue;
 }
 
 .wrapper {
@@ -51,4 +43,3 @@ ul {
     font-size: 1.5rem;
     margin-right: 1rem;
 }
-
