@@ -20,22 +20,37 @@
     }
 }
 
-.textContainer{
+.textContainer {
     width: 80%;
     margin: 0 auto;
     padding: 1rem;
     background-color: $yellow;
+    border: 1px solid $orange;
+    border-radius: 1.5rem;
     opacity: 70%;
 
     h2 {
         text-align: center;
-        padding-bottom: 1rem;
+        padding-bottom: 0.75rem;
+    }
+
+    h3 {
+        text-align: center;
+        padding-bottom: 0.75rem;
+
+        span {
+            color: $blue;
+        }
     }
 
     p {
         text-align: center;
     }
-} 
+}
+
+.pText {
+    padding-bottom: 1rem;
+}
 
 .sunMobile {
     display: none;
@@ -44,14 +59,15 @@
 .buttonContainer {
     display: flex;
     justify-content: center;
+    margin-top: 1rem;
 
     .arrowDownButton {
-        width: 4rem;
-        padding-top: 0.5rem;
+        width: 5rem;
+        padding-top: 1rem;
         background: $yellow;
         opacity: 70%;
+        border: 1px solid $orange;
         border-radius: 50%;
-        border: none;
         text-align: center;
         cursor: pointer;
         transition: 0.3s ease, color 0.3s ease;
@@ -64,11 +80,17 @@
 }
 
 .dark {
-    .textContainer{
+    .textContainer {
         background: $white;
+        border: 3px solid white;
+
+        span {
+            color: black;
+        }
     }
 
     .arrowDownButton {
         background: $white;
+        border: 3px solid white;
     }
 }

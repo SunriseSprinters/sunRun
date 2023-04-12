@@ -5,11 +5,9 @@ footer {
     background: $orange;
     position: fixed;
     bottom: 0;
-
     width: 100vw;
     
     p {
-        display: flex;
         flex-wrap: wrap;
         justify-content: center;
     }
@@ -31,9 +29,9 @@ footer {
 
 .dark footer {
     background: $blue;
-
+    
     p, 
-    a {
+    a{
         color: white
     }
 }
