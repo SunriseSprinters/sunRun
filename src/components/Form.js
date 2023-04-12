@@ -27,7 +27,7 @@ const Form = (props) => {
     return (
         <section className="form">
             <form onSubmit={handleSubmit} action="">
-                <Link to="/" className="homepage"><AiOutlineArrowLeft/></Link>
+                {/* <Link to="/" className="homepage"><AiOutlineArrowLeft/></Link> */}
                 <label 
                     htmlFor="date" >
                         date

@@ -4,6 +4,7 @@ import React  from 'react';
 import moment from 'moment';
 
 // COMPONENTS
+import Instructions from "./Instructions";
 import Form from "./Form";
 import SunDisplay from './SunDisplay';
 import SideBar from "./SideBar";
@@ -99,6 +100,7 @@ const SunInfo = () => {
         // passing the handleChange and handleSubmit functions, and other attributes to use as props so that the <Form /> component have access to it
         <div className="sunInfoPage">
             <SideBar />
+            <Instructions />
             <Form 
                 handleChange={handleChange} 
                 handleSubmit={handleSubmit} 
