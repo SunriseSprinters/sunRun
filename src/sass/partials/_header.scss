@@ -7,7 +7,7 @@ header {
     width: 100%;
     display: flex;
     justify-content: space-between;
-
+    
     .logo {
         margin-left: 2.5rem;
         width: 3.5rem;
@@ -23,7 +23,22 @@ header {
         border-style: none;
         background-color: rgba( 0, 0, 0, 0);
         cursor: pointer;
+        transition: 0.3s ease, color 0.3s ease;
+        color: #565656;
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
+}
+
+.themeButton:hover{
+    color: $blue
+
+}
+
+.dark .themeButton:hover{
+    color: $orange
 }
 
 .dark header {

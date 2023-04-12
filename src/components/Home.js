@@ -17,9 +17,10 @@ const Home = () => {
 
                     <div className="textContainer">
                         <h2>Welcome to SunRun!</h2>
+                        <h3>A <span><em>Toronto-based</em></span> Running App</h3>
                         <p className="pText">Say goodbye to dull runs and hello to a more exciting workout experience with our app designed to help you plan a scenic route while keeping track of the sunrise and sunset times.</p>
                         
-                        <p>Click the arrow below to start planning your run</p>
+                        <p>Click the arrow below to start planning and saving your run!</p>
                     </div>
 
                     <div className="sunCircle">

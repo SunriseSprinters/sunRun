@@ -44,10 +44,6 @@
     .instructions {
         width: 65%;
     }
-
-    .buttonContainer .arrowDownButton {
-        width: 3rem;
-    }
 }
 
 @media (max-width: 550px) {
@@ -69,6 +65,7 @@
 
     .sunMobile {
         display: block;
+        padding-top: 2.1rem;
     }
 
     .sunCircle {
@@ -79,11 +76,6 @@
         .buttonContainer {
             position: absolute;
             bottom: 1.5rem;
-        }
-
-        .buttonContainer .arrowDownButton {
-            width: 2.5rem;
-            margin: 0;
         }
     }
 
@@ -97,6 +89,7 @@
 
 @media (max-width: 510px) {
         .sunCircle {
+            padding-top: 0;
             .buttonContainer {
                 bottom: 2.5rem;
             }
@@ -159,6 +152,53 @@
 @media (max-width: 363px) {
     h2 {
         font-size: clamp(1.7rem, 3.5vw, 4rem);
+    }
+}
+
+// Instructions.js
+@media (max-width: 1000px) {
+    .instructionsContainer {
+        width: 76%;
+    }
+}
+
+@media (max-width: 760px) {
+    .instructions {
+        width: 100%;
+    }
+}
+
+@media (max-width: 543px) {
+    .instructionsContainer {
+        width: 88%;
+    }
+
+    .instructionsContainer .homepage {
+        top: 1rem;
+        left: 1rem;
+    }
+
+    .instructionsContainer .instructionsList {
+        padding: 0 1rem;
+    }
+
+    .instructionsList li {
+        font-size: clamp(0.7rem, 2vw, 0.9rem);
+    }
+}
+
+@media (max-width: 320px) {
+    .instructionsContainer {
+        width: 100%;
+
+        h3 {
+            padding-left: 1rem;
+        }
+
+        .homepage {
+            top: 0.5rem;
+            left: 0.5rem;
+        }
     }
 }
 

@@ -3,6 +3,8 @@
 .sunDisplay {
     margin: 0 auto;
     background: $yellow;
+    border-radius: 1.5rem;
+    border: 1px solid $orange;
     min-width: 15rem;
     width: 40%;
     text-align: center;
@@ -10,11 +12,12 @@
     position: relative;
     
     span {
-        display: inline-block;
+        display: block;
     }
 }
 
 .dark .sunDisplay{
     background: $white;
+    border: 3px solid white;
 }
 
