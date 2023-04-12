@@ -6,8 +6,8 @@ const Header = (props) => {
 const {toggleTheme, pageTheme} = props;
 
 const themeToggleIcon = pageTheme === 'light'
-        ? <><BsSunFill className="sun"/></>
-        : <><BsMoonFill className="moon"/></> 
+        ? <><BsSunFill /></>
+        : <><BsMoonFill /></> 
 
     return (
         <header>
