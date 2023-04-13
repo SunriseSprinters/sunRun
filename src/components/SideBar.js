@@ -38,7 +38,8 @@ const SideBar = () => {
                     id: key,
                     time: dataResponse[key].startTime,
                     date: dataResponse[key].date,
-                    sunMode: dataResponse[key].sunset
+                    sunMode: dataResponse[key].sunset,
+                    initials: dataResponse[key].initials
                 }
 
                 // Push each saved run object to an array we created in arrayOfRuns
@@ -78,6 +79,7 @@ const SideBar = () => {
                                     key={userRun.id} 
                                     time={userRun.time} 
                                     date={userRun.date} 
+                                    initials={userRun.initials}
                                     sunMode={userRun.sunMode} 
                                     handleRemove={handleRemove}/>
                             )

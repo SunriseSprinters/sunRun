@@ -21,13 +21,19 @@ function App() {
   // Declared state to track which theme the page is currently displaying, set to light on page load.
   const [pageTheme, setPageTheme] = useState('light');
   // declared toggle function to flip theme from light to dark. Need to pass as prop to header
+
+  const body = document.querySelector("body");
+
   const toggleTheme = () => {
     if (pageTheme === 'light') {
       setPageTheme('dark')
+      body.className = 'dark'
     } else {
       setPageTheme('light')
+      body.className = 'light'
     }
   }
+
 
   return (
     <div className={`App ${pageTheme}`}>

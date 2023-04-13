@@ -14,7 +14,7 @@ const SunDisplay = (props) => {
     return(
         <section className="sunDisplay">
             <button disabled={disabled} className="heart" onClick={props.handleClick}>
-                {favIcon}
+                {favIcon}<span className="sr-only">click here to save the run!</span>
             </button>
             <p>Start your SunRun at:</p>
             <h2>
