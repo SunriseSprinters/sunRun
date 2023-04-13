@@ -27,8 +27,6 @@ const Form = (props) => {
     return (
         <section className="form">
             <form onSubmit={handleSubmit} action="">
-
-                <Link to="/" className="homepage"><AiOutlineArrowLeft alt="Back to Home" /><span className="sr-only">back arrow to home page</span></Link>
                 <label htmlFor="initials">
                     Add your Initials
                 </label>

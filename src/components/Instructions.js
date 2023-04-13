@@ -7,7 +7,7 @@ const Instructions = () => {
         <section className="instructions">
             <div className="wrapper instructionsFlex">
                 <div className="instructionsContainer">
-                    <Link to="/" className="homepage"><AiOutlineArrowLeft/></Link>
+                    <Link to="/" className="homepage"><AiOutlineArrowLeft alt="Back to Home" /><span className="sr-only">back arrow to home page</span></Link>
                     <h3>How To Use SunRun</h3>
                     <ol className="instructionsList">
                         <li>
