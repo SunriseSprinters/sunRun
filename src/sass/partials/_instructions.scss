@@ -38,3 +38,9 @@
         width: 2.5rem;
     }
 }
+
+// Dark Mode Styling
+.dark .instructionsContainer {
+    background: $white;
+    border: 3px solid white;
+}
